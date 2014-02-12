@@ -58,6 +58,14 @@ a.under:link,a.under:active,a.under:visited,a.under:hover{text-decoration:underl
 
 #main{width: 960px;margin: 0 auto;position: relative;zoom: 1}
 
+/*新闻列表*/
+.ftxtList{overflow: hidden}
+.fListWrap{margin-bottom: -1px}
+.fListWrap li{height: 20px;padding: 5px 10px 4px 0;border-bottom: 1px dotted #7d858a;line-height: 20px;text-align: right;}
+.fListWrap li span {float: left;display: block;height: 20px;overflow: hidden;}
+.fListWrap li .sChannel{width: 66px;margin-right: 35px;background: #72a547;text-align: center;}
+.fListWrap li .sChannel a{color: #fff}
+
 /*弹层蒙版*/
 #NIE-overlayer{display:none;position:absolute;width:100%;height:100%;background:#000;filter:alpha(opacity=80);opacity:.8;top:0;left:0;z-index:99}
 footer{text-align:center;clear:both;height:66px;line-height:60px;position: relative;margin:0 auto;background: #070e1c;padding:10px 0}
