@@ -108,6 +108,19 @@ a.under:link,a.under:active,a.under:visited,a.under:hover{text-decoration:underl
 #slideShow ol li a{display: block;width: 10px;height: 10px;background: url(http://res.nie.netease.com/xy2/fab/13v3/images/slidenav.png) no-repeat -10px 0}
 #slideShow ol li a.current{background-position: 0 0}
 
+/*大话2广告Banner*/
+.xy2Banner{width: 420px;position: relative}
+.dSwitch2{position:relative;width:420px;height:240px;overflow:hidden}
+.dSwitch2 a{position:absolute;display:block;width:420px;height:240px}
+.dSwitch2 img{display:block;width:420px;height:240px}
+.dSwitchnav2{float:right;position:relative;display:inline;height:14px;margin:-24px 10px 0 0;z-index:2;text-align:right}
+.dSwitchnav2 a{display:inline-block;width:14px;height:14px;overflow:hidden;margin-left:4px;background:#d5d5d5;text-align:left;color:#514e4a;cursor:pointer;font-size:12px;text-align:center;line-height:14px}
+.dSwitchnav2 a.current{background:#b60000;color:#ecbcbf}
+
+/*天下3广告Banner*/
+.SwitchPic {width: 351px;height: 168px;overflow: hidden;position: relative;}
+.SwitchPicWrap {position: relative;width: 351px;height: 168px;}
+
 /*弹层蒙版*/
 #NIE-overlayer{display:none;position:absolute;width:100%;height:100%;background:#000;filter:alpha(opacity=80);opacity:.8;top:0;left:0;z-index:99}
 footer{text-align:center;clear:both;height:66px;line-height:60px;position: relative;margin:0 auto;background: #070e1c;padding:10px 0}

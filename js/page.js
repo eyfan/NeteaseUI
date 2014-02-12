@@ -11,6 +11,15 @@ $(function(){
             $(".fSwitchNav").append("<a>"+ nums +"</a>")
         }
         $.Switch(".fSwitchNav a",".fSwitchPic a");
+//        ´ó»°2
+        nie.util.abc.load({promark: "lis9z", callBack: function () {
+            var g = $("#switch-2 a"), f = $("#switchnav-1");
+            g.each(function (j) {
+                var h = j + 1;
+                f.append("<a>" + h + "</a>")
+            });
+            $.Switch({btnDoms: [f.children("a")], imgDoms: [g]});
+        }, type: "js"})
     })
 })
 function scrollPics_tab(opt){
