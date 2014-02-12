@@ -19,7 +19,7 @@ legend{color:#000;}
 article a{transition:all .5s ease-in-out;-webkit-transition:all .5s ease-in-out;-moz-transition:all .5s ease-in-out;-o-transition:all .5s ease-in-out;-ms-transition:all .5s ease-in-out;}
 /* =e Reset */
 /* =s base */
-html,body{height:100%;background-color: #07192b;margin: 0;padding: 0}
+html,body{height:100%;margin: 0;padding: 0}
 body{font-family:"Microsoft YaHei",simSun,"Lucida Grande","Lucida Sans Unicode",Arial;line-height:170%;font-size:12px;color:#000;}
 i{font-style:normal;}
 a{color:#000;text-decoration: none}
