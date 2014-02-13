@@ -20,6 +20,15 @@ $(function(){
             });
             $.Switch({btnDoms: [f.children("a")], imgDoms: [g]});
         }, type: "js"})
+//        ÌìÏÂ3
+        nie.util.abc.load({promark: "zrpnw",callBack: function () {
+            var g = $("#banner-switch a"), f = $("#switchnav-2 nav");
+            g.each(function () {
+                $(this).addClass('SwitchPicShow');
+                f.append("<a class='SwitchPicNavBtn sprite sprite-switchnav'></a>")
+            });
+            $.Switch({btnDoms: [f.children("a")], imgDoms: [g]})
+        }, type: "js"})
     })
 })
 function scrollPics_tab(opt){
