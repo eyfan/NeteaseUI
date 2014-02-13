@@ -5,7 +5,7 @@ $(function(){
         wrap: '#slideWrap',
         tab: '#slideShow ol a'
     });
-    nie.use(["ui.tab", 'ui.Switch'], function () {
+    nie.use(["ui.tab", 'ui.Switch',"ui.marquee2"], function () {
 //        tab
         $.tab(".fTabNav li", ".fTabCont .ftxtList");
 //        switch
@@ -33,6 +33,11 @@ $(function(){
             });
             $.Switch({btnDoms: [f.children("a")], imgDoms: [g]})
         }, type: "js"})
+//        滚动模块
+        if($("#marquee li").length > 3){
+            $.marquee2("#marquee","top");
+        }
+       $.marquee2("#marquee2","left");
     });
 //    回到顶部
     $(window).scroll(function () {

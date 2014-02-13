@@ -146,6 +146,13 @@ a.under:link,a.under:active,a.under:visited,a.under:hover{text-decoration:underl
 .fSearch .inpTxt {width: 301px;height: 29px;background: #f3eee5;font-size: 12px;line-height: 29px;color: #b2866b;padding-left: 10px;}
 .fSearch .inpBut {float: right;width: 68px;height: 30px;overflow: hidden;border: 0;text-indent: -9999px;cursor: pointer;background: none}
 
+/*滚动模块*/
+.fMarquee {position:relative;width:275px;height:158px;overflow:hidden;}
+.fMarquee .mar {position:relative;width:275px;}
+#marquee2{height: 30px}
+#marquee2 ul{width: 9999px}
+#marquee2 li{float: left}
+
 footer{text-align:center;clear:both;height:66px;line-height:60px;position: relative;margin:0 auto;background: #070e1c;padding:10px 0}
 footer{color: #ecbf71}
 footer a{color:#ecbf71;text-decoration:none;}
