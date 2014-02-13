@@ -5,37 +5,43 @@ $(function(){
         wrap: '#slideWrap',
         tab: '#slideShow ol a'
     });
-    nie.use(["ui.tab",'ui.Switch'],function(){
+    nie.use(["ui.tab", 'ui.Switch'], function () {
 //        tab
-        $.tab(".fTabNav li",".fTabCont .ftxtList");
+        $.tab(".fTabNav li", ".fTabCont .ftxtList");
 //        switch
-        for(var i=0;i<$(".fSwitchPic a").length;i++){
-            nums = i+1
-            $(".fSwitchNav").append("<a>"+ nums +"</a>")
+        for (var i = 0; i < $(".fSwitchPic a").length; i++) {
+            nums = i + 1;
+            $(".fSwitchNav").append("<a>" + nums + "</a>")
         }
-        $.Switch(".fSwitchNav a",".fSwitchPic a");
+        $.Switch(".fSwitchNav a", ".fSwitchPic a");
 
 //        大话2
         nie.util.abc.load({promark: "lis9z", callBack: function () {
-            var g = $("#switch-2 a"), f = $("#switchnav-1");
+            var g = $("#switch-2").find("a"), f = $("#switchnav-1");
             g.each(function (j) {
                 var h = j + 1;
                 f.append("<a>" + h + "</a>")
             });
             $.Switch({btnDoms: [f.children("a")], imgDoms: [g]});
-        }, type: "js"})
+        }, type: "js"});
 //        天下3
-        nie.util.abc.load({promark: "zrpnw",callBack: function () {
-            var g = $("#banner-switch a"), f = $("#switchnav-2 nav");
+        nie.util.abc.load({promark: "zrpnw", callBack: function () {
+            var g = $("#banner-switch").find("a"), f = $("#switchnav-2").find("nav");
             g.each(function () {
                 $(this).addClass('SwitchPicShow');
                 f.append("<a class='SwitchPicNavBtn sprite sprite-switchnav'></a>")
             });
             $.Switch({btnDoms: [f.children("a")], imgDoms: [g]})
         }, type: "js"})
-    })
+    });
 //    回到顶部
-    $(window).scrollTop() > 670 ? $("#gotop").fadeIn():$("#gotop").fadeOut();
+    $(window).scroll(function () {
+        var scrollValue=$(window).scrollTop(),top=$("#gotop")
+        scrollValue > 500 ? top.stop().animate({top:scrollValue+300,opacity:'1'}):top.stop().animate({top:'500px',opacity:'0'});
+    });
+    $("#gotop").click(function () {
+        $("html,body").animate({scrollTop:0},200);
+    })
 })
 function scrollPics_tab(opt){
     //只针对一个tab con
