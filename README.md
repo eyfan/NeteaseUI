@@ -2,7 +2,7 @@ NeteaseUI
 =========
 
 网易网站组官网相关UI制作
- <blockquote>为了方便今后的页面制作，特此做一个方便以后调用的UI库，来提高工作效率</blockquote>
+ <blockquote>为了方便今后的页面制作，特此做一个方便以后调用的UI库，来提高大家的工作效率</blockquote>
 
 
 **相关UI组件**
