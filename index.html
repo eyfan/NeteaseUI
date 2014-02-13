@@ -81,60 +81,10 @@
 
                     <!--弹层合集-->
                     <blockquote>
-                        <p>弹层合集（普通弹层、flash弹层、视频弹层）</p>
+                        <p><a href="fpop.html" target="_blank">弹层合集（普通弹层、flash弹层、视频弹层）</a></p>
                         弹层插件，可以控制弹层的大小、传入flash地址，和flash的wmode，视频地址
                     </blockquote>
-                    <a href="javascript:void(0)" id="pop1">点击我就弹出 普通 弹层了哦亲</a>
-                    <style type="text/css">
-                        #shareTc{width:491px;height:524px;background: url(http://res.nie.netease.com/xy2/zt/14/0126_newyear5/images/tcbg.jpg) no-repeat}
-                        #shareTc .aCloseQ{display:block;position:absolute;right: 10px;top: 12px;width: 57px;height: 51px;cursor:pointer;text-indent: -9999px}
-                    </style>
-                    <br>
-                    <a href="javascript:void(0)" id="pop2">点击我就弹出 flash 弹层了哦亲</a>
-                    <br>
-                    <a href="javascript:void(0)" id="pop3">点击我就弹出 视频 弹层了哦亲</a>
 
-                    <script>
-                        $(function(){
-                            //-----------以下为普通弹层示例
-                            $('#pop1').click(function(){
-                                openD({
-                                    id: '#shareTc',//弹出的弹层id
-                                    type : '1',//1为普通弹层，2为flash弹层，3为视频弹层
-                                    width: '491',//弹层宽度
-                                    height: '524'//弹层高度
-                                })
-                            })
-                          //-----------以下为flash弹层示例
-                            $('#pop2').click(function(){
-                                openD({
-                                    id: '#flashtc1',//弹出的弹层id
-                                    type : '2',//1为普通弹层，2为flash弹层，3为视频弹层
-                                    width: '960',//弹层宽度
-                                    height: '600',//弹层高度
-                                    flashurl:'http://res.nie.netease.com/xy2/qt/14/0109_biwu/pop.swf',//弹层所需的flash地址
-                                    wmode: 'opaque'
-                                })
-                            })
-                            //-----------以下为视频弹层示例
-                            $('#pop3').click(function(){
-                                openD({
-                                    id: '#videoShow',//弹出的弹层id
-                                    type : '3',//1为普通弹层，2为flash弹层，3为视频弹层
-                                    width: '800',//弹层宽度
-                                    height: '450',//弹层高度
-                                    videourl:'http://v.nie.netease.com/tx3/2013/1231/longwu.f4v'//弹层所需的flash地址
-                                })
-                            })
-
-                        })
-                        //flash自己内部调用的函数
-                        var closeMe = function(){
-                            $("#NIE-overlayer").hide();
-                            $('.aCloseQ').show();
-                            $('#flashtc1').hide();
-                        }
-                    </script>
 
                     <!--搜索模块-->
                     <blockquote>
@@ -479,23 +429,7 @@
 </script>
 <![endif]-->
 
-<!--普通弹层-->
-<div class="dTc" id="shareTc" style="display:none">
-    <h3 class="hide">分享赢龙马，送贴心防雾霭口罩</h3>
-    <a class="aCloseQ" href="javascript:void(0)"></a>
-</div>
-<!--flash弹层-->
-<div id="flashtc1" class="dTc" style="display:none">
-    <a href="javascript:void(0)" class="aCloseQ"></a>
-    <div id="flash-wrap"></div>
-</div>
-<!--视频弹层-->
-<div class="dTc videoBox" id="videoShow" style="display: none">
-    <a class="aCloseQ" title="关闭">关闭</a>
-    <div class="dialogCon">
-        <div class="dVideoBox"><div id="dVideo"></div></div>
-    </div>
-</div>
+
 <!--顶条功能添加 Start-->
 <style type="text/css">
     #ScrollTopBar{width: 100%;position: fixed;height: 97px;background: #fdef6c;top: -97px;z-index: 9999;_position:absolute}
