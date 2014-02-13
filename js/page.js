@@ -113,3 +113,86 @@ function scrollPics_tab(opt){
         };
     }
 }
+
+//弹层
+function openD(opt){
+    //只针对一个tab con
+    var settings = {
+            id: '',
+            type : '',//1为普通弹层，2为flash弹层，3为视频弹层
+            width: '',
+            height: '',
+            flashurl:'',
+            videourl:'',
+            wmode: ''
+        },
+        opt = opt || {};
+    settings = $.extend(settings, opt);
+
+    var popbg = $("#NIE-overlayer"),
+        popid = $(settings.id),
+        type = settings.type,
+        w =settings.width,
+        h = settings.height,
+        furl = settings.flashurl,
+        vurl = settings.videourl,
+        wmode = settings.wmode,
+        dh = $(document).height(),
+        wh = $(window).height(),
+        ww = $(window).width(),
+        st = $(window).scrollTop(),
+        sl = $(window).scrollLeft();
+// 蒙版弹出
+    popbg.css({"height":dh}).show();
+// 弹层弹出
+    function posPop(idname){
+        idname.height()>wh?idname.fadeIn().css({'top':st,'left':(ww-idname.width())/2+sl}):idname.fadeIn().css({'top':(wh-idname.height())/2+st,'left':(ww-idname.width())/2+sl});
+    }
+//  弹层关闭
+    $('.aCloseQ').click(function(){
+        $(this).parent().fadeOut();
+        $("#NIE-overlayer").hide();
+    });
+//判断弹层类别
+    switch (type){
+        case '1':
+            posPop(popid);
+            break;
+        case '2':
+            $('#flash-wrap').html('');
+            nie.use(["util.swfobject"], function () {
+                $('#flash-wrap').flash({
+                    swf:furl,
+                    width:w,
+                    height:h,
+                    allowScriptAccess:'always',
+                    wmode:wmode
+                });
+            })
+            var obj = $('#flashtc1');
+            obj.css({'width':w,'height':h});
+            $('.aCloseQ').hide();//flash本身有做关闭按钮
+            posPop(popid);
+
+            break;
+        case '3':
+            $('#dVideo').html('').css({'height':h+'px','width':w+'px'});
+            popid.css({'height':h+22+'px','width':w+22+'px'});
+            nie.use(['nie.util.video'], function () {
+                nie.util.video($('#dVideo'),{
+                    movieUrl:vurl,
+                    mp4_movieUrl:vurl.replace(/\.(flv|f4v)/,'.mp4'),
+                    width:w,
+                    height:h,
+                    bufferTime:5,
+                    loopTimes:0,
+                    wmode:"opaque",
+                    volume:0.8,
+                    autoPlay:true
+                });
+            })
+            break;
+        default :break;
+    }
+
+}

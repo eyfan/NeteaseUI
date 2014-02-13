@@ -186,7 +186,32 @@
                         <p>flash弹层</p>
                         弹层插件，可以控制弹层的大小、传入flash地址，和flash的wmode
                     </blockquote>
+                    <a href="javascript:void(0)" id="pop2">点击我就弹出flash弹层了哦亲</a>
 
+                    <script>
+                        $(function(){
+                            nie.use(["util.swfobject"], function () {
+
+                          //-----------以下为flash弹层示例
+                                $('#pop2').click(function(){
+                                    openD({
+                                        id: '#flashtc1',//弹出的弹层id
+                                        type : '2',//1为普通弹层，2为flash弹层，3为视频弹层
+                                        width: '960',//弹层宽度
+                                        height: '600',//弹层高度
+                                        flashurl:'http://res.nie.netease.com/xy2/qt/14/0109_biwu/pop.swf',//弹层所需的flash地址
+                                        wmode: 'opaque'
+                                    })
+                                })
+                            })
+                        })
+                        //flash自己内部调用的函数
+                        var closeMe = function(){
+                            $("#NIE-overlayer").hide();
+                            $('.aCloseQ').show();
+                            $('#flashtc1').hide();
+                        }
+                    </script>
                 </div>
             <!--尾部-->
             <footer>
@@ -208,5 +233,9 @@
 
 </script>
 <![endif]-->
+<div id="flashtc1" class="dTc" style="display:none">
+    <a href="javascript:void(0)" class="aCloseQ"></a>
+    <div id="flash-wrap"></div>
+</div>
 </body>
 </html>
