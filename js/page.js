@@ -1,16 +1,20 @@
 $(function(){
+//    scroll
     scrollPics_tab({
         currentTarget:'#slideShow',
         wrap: '#slideWrap',
         tab: '#slideShow ol a'
     });
     nie.use(["ui.tab",'ui.Switch'],function(){
+//        tab
         $.tab(".fTabNav li",".fTabCont .ftxtList");
+//        switch
         for(var i=0;i<$(".fSwitchPic a").length;i++){
             nums = i+1
             $(".fSwitchNav").append("<a>"+ nums +"</a>")
         }
         $.Switch(".fSwitchNav a",".fSwitchPic a");
+
 //        大话2
         nie.util.abc.load({promark: "lis9z", callBack: function () {
             var g = $("#switch-2 a"), f = $("#switchnav-1");
@@ -30,6 +34,8 @@ $(function(){
             $.Switch({btnDoms: [f.children("a")], imgDoms: [g]})
         }, type: "js"})
     })
+//    回到顶部
+    $(window).scrollTop() > 670 ? $("#gotop").fadeIn():$("#gotop").fadeOut();
 })
 function scrollPics_tab(opt){
     //只针对一个tab con
