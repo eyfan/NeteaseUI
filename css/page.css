@@ -156,7 +156,7 @@ a.under:link,a.under:active,a.under:visited,a.under:hover{text-decoration:underl
 /*职业切换*/
 .ftab,.ptab,.gtab{display:none;}
 .current{display:block;}
-.player{ float: left; width: 632px; height: 479px; margin-top: 34px;}
+.player{ width: 632px; height: 479px;}
 .player h4{ display: none}
 .pnav,.pnav ul{ width: 632px; height: 59px; }
 .pnav li,.pnav a{float:left; display:block; width:158px;height:59px; background:url(http://res.nie.netease.com/xy2/fab/13v3/images/tabshow.png) 0 -247px; text-indent:-9999px; cursor:default;}
