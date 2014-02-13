@@ -8,6 +8,12 @@ $(function(){
     nie.use(["ui.tab", 'ui.Switch',"ui.marquee2"], function () {
 //        tab
         $.tab(".fTabNav li", ".fTabCont .ftxtList");
+//        职业切换
+        $.tab(".pnav li",".ptabs > div");
+        $.tab(".gnav1 a",".gtabs1 > div");
+        $.tab(".gnav2 a",".gtabs2 > div");
+        $.tab(".gnav3 a",".gtabs3 > div");
+        $.tab(".gnav4 a",".gtabs4 > div");
 //        switch
         for (var i = 0; i < $(".fSwitchPic a").length; i++) {
             nums = i + 1;
@@ -51,6 +57,11 @@ $(function(){
     $('.fSearch').find('.inpBut').click(function(){
         var val = $("#searchKeyWords1").val();
         window.open(encodeURI("http://so.xy2.163.com/search?qs="+val));
+    })
+//    职业切换
+    $('.gifs').click(function(){
+        var imgurl = $(this).attr('data-src');
+        $(this).attr('src',imgurl);
     })
 })
 function scrollPics_tab(opt){

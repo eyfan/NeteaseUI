@@ -153,6 +153,108 @@ a.under:link,a.under:active,a.under:visited,a.under:hover{text-decoration:underl
 #marquee2 ul{width: 9999px}
 #marquee2 li{float: left}
 
+/*职业切换*/
+.ftab,.ptab,.gtab{display:none;}
+.current{display:block;}
+.player{ float: left; width: 632px; height: 479px; margin-top: 34px;}
+.player h4{ display: none}
+.pnav,.pnav ul{ width: 632px; height: 59px; }
+.pnav li,.pnav a{float:left; display:block; width:158px;height:59px; background:url(http://res.nie.netease.com/xy2/fab/13v3/images/tabshow.png) 0 -247px; text-indent:-9999px; cursor:default;}
+#pmenu2{ background-position:-158px -247px;}
+#pmenu3{background-position:-316px -247px;}
+#pmenu4{background-position:-474px -247px;}
+.current #pmenu1{background-position:0 -306px;}
+.current #pmenu2{background-position:-158px  -307px;}
+.current #pmenu3{background-position:-316px -307px;}
+.current #pmenu4{background-position:-474px -307px;}
+.ptab{ position: relative; width:632px; height: 391px; }
+.gtabs{position: relative;*zoom:1;z-index: 8}
+.gtab{ width:632px; height: 391px;}
+.goods{ width: 252px; font-size:14px; z-index: 6;color: #68eaff;position: absolute;right: -8px; top:69px;}
+.goods p{ height: 20px; line-height: 20px; color: #9c321d}
+.gifs{ position: absolute; width: 247px; height: 226px; cursor: pointer;right: 0;bottom: 20px;}
+.gifs img{display: block;width: 247px;height: 226px;}
+
+.gnav{ width: 60px; position: absolute; top: 12px; left: 15px; z-index: 99}
+.gnav li,.gnav a{display:block; height:53px; width:60px; background:url(http://res.nie.netease.com/xy2/fab/13v3/images/role.png) 0 0; text-indent:-9999px; cursor:default;}
+.gnav li{ padding-bottom:10px; background:none;}
+.gmenu1,#gmenu1{background-position:0 -312px;}
+.gmenu2,#gmenu2{background-position:0 -363px;}
+.gmenu3,#gmenu3{background-position:0 -415px;}
+.gmenu4,#gmenu4{background-position:0 -467px;}
+.gmenu5,#gmenu5{background-position:0 -519px;}
+.gmenu6,#gmenu6{background-position:0 -572px;}
+#gmenu1.current{background-position:0 0;}
+#gmenu2.current{background-position:0 -52px;}
+#gmenu3.current{background-position:0 -104px;}
+#gmenu4.current{background-position:0 -156px;}
+#gmenu5.current{background-position:0 -208px;}
+#gmenu6.current{background-position:0 -260px;}
+.gtab_1{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_1.jpg) no-repeat bottom right;}
+.gtab_2{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_2.jpg) no-repeat bottom right;}
+.gtab_3{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_3.jpg) no-repeat bottom right;}
+.gtab_4{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_4.jpg) no-repeat bottom right;}
+.gtab_5{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_5.jpg) no-repeat bottom right;}
+.gtab_6{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_6.jpg) no-repeat bottom right;}
+
+.gmenu21,#gmenu21{background-position:-180px -312px;}
+.gmenu22,#gmenu22{background-position:-180px -363px;}
+.gmenu23,#gmenu23{background-position:-180px -415px;}
+.gmenu24,#gmenu24{background-position:-180px -467px;}
+.gmenu25,#gmenu25{background-position:-180px -519px;}
+.gmenu26,#gmenu26{background-position:-180px -572px;}
+#gmenu21.current{background-position:-180px 0;}
+#gmenu22.current{background-position:-180px -52px;}
+#gmenu23.current{background-position:-180px -104px;}
+#gmenu24.current{background-position:-180px -156px;}
+#gmenu25.current{background-position:-180px -208px;}
+#gmenu26.current{background-position:-180px -260px;}
+.gtab_21{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x1.jpg) no-repeat bottom right;}
+.gtab_22{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x2.jpg) no-repeat bottom right;}
+.gtab_23{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x3.jpg) no-repeat bottom right;}
+.gtab_24{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x4.jpg) no-repeat bottom right;}
+.gtab_25{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x5.jpg) no-repeat bottom right;}
+.gtab_26{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x6.jpg) no-repeat bottom right;}
+
+.gmenu31,#gmenu31{background-position:-120px -312px;}
+.gmenu32,#gmenu32{background-position:-120px -363px;}
+.gmenu33,#gmenu33{background-position:-120px -415px;}
+.gmenu34,#gmenu34{background-position:-120px -467px;}
+.gmenu35,#gmenu35{background-position:-120px -519px;}
+.gmenu36,#gmenu36{background-position:-120px -572px;}
+#gmenu31.current{background-position:-120px 0;}
+#gmenu32.current{background-position:-120px -52px;}
+#gmenu33.current{background-position:-120px -104px;}
+#gmenu34.current{background-position:-120px -156px;}
+#gmenu35.current{background-position:-120px -208px;}
+#gmenu36.current{background-position:-120px -260px;}
+.gtab_31{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m1.jpg) no-repeat bottom right;}
+.gtab_32{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m2.jpg) no-repeat bottom right;}
+.gtab_33{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m3.jpg) no-repeat bottom right;}
+.gtab_34{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m4.jpg) no-repeat bottom right;}
+.gtab_35{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m5.jpg) no-repeat bottom right;}
+.gtab_36{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m6.jpg) no-repeat bottom right;}
+
+
+.gmenu41,#gmenu41{background-position:-60px -312px;}
+.gmenu44,#gmenu42{background-position:-60px -363px;}
+.gmenu43,#gmenu43{background-position:-60px -415px;}
+.gmenu44,#gmenu44{background-position:-60px -467px;}
+.gmenu45,#gmenu45{background-position:-60px -519px;}
+.gmenu46,#gmenu46{background-position:-60px -572px;}
+#gmenu41.current{background-position:-60px 0;}
+#gmenu42.current{background-position:-60px -52px;}
+#gmenu43.current{background-position:-60px -104px;}
+#gmenu44.current{background-position:-60px -156px;}
+#gmenu45.current{background-position:-60px -208px;}
+#gmenu46.current{background-position:-60px -260px;}
+.gtab_41{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r1.jpg) no-repeat bottom right;}
+.gtab_42{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r2.jpg) no-repeat bottom right;}
+.gtab_43{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r3.jpg) no-repeat bottom right;}
+.gtab_44{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r4.jpg) no-repeat bottom right;}
+.gtab_45{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r5.jpg) no-repeat bottom right;}
+.gtab_46{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r6.jpg) no-repeat bottom right;}
+
 footer{text-align:center;clear:both;height:66px;line-height:60px;position: relative;margin:0 auto;background: #070e1c;padding:10px 0}
 footer{color: #ecbf71}
 footer a{color:#ecbf71;text-decoration:none;}
