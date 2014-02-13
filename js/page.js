@@ -115,6 +115,7 @@ function scrollPics_tab(opt){
 }
 
 //弹层
+//--这个函数是将三种基本弹层合在一体的，所以代码会比较长一些，可以根据需求自己独立出来相对应的弹层代码
 function openD(opt){
     //只针对一个tab con
     var settings = {
@@ -132,8 +133,8 @@ function openD(opt){
     var popbg = $("#NIE-overlayer"),
         popid = $(settings.id),
         type = settings.type,
-        w =settings.width,
-        h = settings.height,
+        w =parseInt(settings.width),
+        h = parseInt(settings.height),
         furl = settings.flashurl,
         vurl = settings.videourl,
         wmode = settings.wmode,
@@ -149,10 +150,10 @@ function openD(opt){
         idname.height()>wh?idname.fadeIn().css({'top':st,'left':(ww-idname.width())/2+sl}):idname.fadeIn().css({'top':(wh-idname.height())/2+st,'left':(ww-idname.width())/2+sl});
     }
 //  弹层关闭
-    $('.aCloseQ').click(function(){
-        $(this).parent().fadeOut();
-        $("#NIE-overlayer").hide();
-    });
+$('.aCloseQ').click(function(){
+    $(this).parent().fadeOut();
+    $("#NIE-overlayer").hide();
+});
 //判断弹层类别
     switch (type){
         case '1':
@@ -178,6 +179,7 @@ function openD(opt){
         case '3':
             $('#dVideo').html('').css({'height':h+'px','width':w+'px'});
             popid.css({'height':h+22+'px','width':w+22+'px'});
+            posPop(popid);
             nie.use(['nie.util.video'], function () {
                 nie.util.video($('#dVideo'),{
                     movieUrl:vurl,
