@@ -176,23 +176,37 @@
 
                     <!--回到顶部按钮-->
                     <blockquote>
-                        <p>回到顶部按钮</p>
+                        <p>回到顶部按钮（请看右边）</p>
                         通用的回到顶部按钮，初始隐藏，下拉后出现
                     </blockquote>
                     <a id="gotop">返回顶部</a>
 
-                    <!--flash弹层-->
+                    <!--弹层合集-->
                     <blockquote>
-                        <p>flash弹层</p>
-                        弹层插件，可以控制弹层的大小、传入flash地址，和flash的wmode
+                        <p>弹层合集（普通弹层、flash弹层、视频弹层）</p>
+                        弹层插件，可以控制弹层的大小、传入flash地址，和flash的wmode，视频地址
                     </blockquote>
-
+                    <a href="javascript:void(0)" id="pop1">点击我就弹出 普通 弹层了哦亲</a>
+                    <style type="text/css">
+                        #shareTc{width:491px;height:524px;background: url(http://res.nie.netease.com/xy2/zt/14/0126_newyear5/images/tcbg.jpg) no-repeat}
+                        #shareTc .aCloseQ{display:block;position:absolute;right: 10px;top: 12px;width: 57px;height: 51px;cursor:pointer;text-indent: -9999px}
+                    </style>
+                    <br>
                     <a href="javascript:void(0)" id="pop2">点击我就弹出 flash 弹层了哦亲</a>
                     <br>
                     <a href="javascript:void(0)" id="pop3">点击我就弹出 视频 弹层了哦亲</a>
 
                     <script>
                         $(function(){
+                            //-----------以下为普通弹层示例
+                            $('#pop1').click(function(){
+                                openD({
+                                    id: '#shareTc',//弹出的弹层id
+                                    type : '1',//1为普通弹层，2为flash弹层，3为视频弹层
+                                    width: '491',//弹层宽度
+                                    height: '524'//弹层高度
+                                })
+                            })
                           //-----------以下为flash弹层示例
                             $('#pop2').click(function(){
                                 openD({
@@ -223,6 +237,25 @@
                             $('#flashtc1').hide();
                         }
                     </script>
+
+                    <!--搜索模块-->
+                    <blockquote>
+                        <p>搜索模块</p>
+                        简单的搜索模块，要用js是因为要转码，你懂的
+                    </blockquote>
+                    <div class="fSearch" id="search0">
+                        <form id="search">
+                            <input type="text" onblur="if(this.value==''){this.value='官网搜索全面升级  欢迎使用';this.style.color='#676767'};" onfocus="this.value=this.value=='官网搜索全面升级  欢迎使用'?'':this.value;this.style.color='#676767';" value="官网搜索全面升级  欢迎使用" class="inpTxt" name="qs" id="searchKeyWords1" style="color: rgb(103, 103, 103);">
+                            <input type="submit" class="inpBut" value="搜索">
+                        </form>
+                    </div>
+
+                    <!--滚动模块-->
+                    <blockquote>
+                        <p>滚动模块</p>
+                        滚动模块，横竖皆有
+                    </blockquote>
+
                 </div>
             <!--尾部-->
             <footer>
@@ -244,6 +277,12 @@
 
 </script>
 <![endif]-->
+
+<!--普通弹层-->
+<div class="dTc" id="shareTc" style="display:none">
+    <h3 class="hide">分享赢龙马，送贴心防雾霭口罩</h3>
+    <a class="aCloseQ" href="javascript:void(0)"></a>
+</div>
 <!--flash弹层-->
 <div id="flashtc1" class="dTc" style="display:none">
     <a href="javascript:void(0)" class="aCloseQ"></a>

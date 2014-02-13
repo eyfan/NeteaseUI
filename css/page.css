@@ -128,7 +128,7 @@ a.under:link,a.under:active,a.under:visited,a.under:hover{text-decoration:underl
 .SwitchPicNavBtn:hover, .SwitchPicNavBtn.current {background-position: 0 0;}
 
 /*回到顶部*/
-#gotop {position: absolute;width: 20px;height: 64px;padding: 15px 7px;background: #b40000;color: #fff;font-family: "Microsoft YaHei";font-size: 14px;font-weight: 800;text-align: center;line-height: 16px;cursor: pointer;top: 500px;right:0;z-index: 9999;opacity: 0;filter:alpha(opacity=0)}
+#gotop {position: absolute;width: 20px;height: 64px;padding: 15px 7px;background: #b40000;color: #fff;font-family: "Microsoft YaHei";font-size: 14px;font-weight: 800;text-align: center;line-height: 16px;cursor: pointer;top: 500px;right:0;z-index: 99;opacity: 0;filter:alpha(opacity=0)}
 #gotop:hover{text-decoration: none}
 
 /*弹层蒙版*/
@@ -140,6 +140,12 @@ a.under:link,a.under:active,a.under:visited,a.under:hover{text-decoration:underl
 .videoBox .dialogCon {overflow: hidden;padding: 5px;}
 .videoBox .dVideoBox {border: 1px solid #999;padding: 4px;background: #666;}
 .videoBox .aCloseQ {position: absolute;width: 57px;height: 57px;display: block;right: -57px;top: 0;cursor: pointer;overflow: hidden;text-indent: -9999px;background: url(http://res.nie.netease.com/tx3/gw/13v1/images/close.jpg) no-repeat 0 0;}
+
+/*搜索版块*/
+.fSearch {width: 392px;height: 31px;padding: 14px; margin: 0 auto;background: url(http://res.nie.netease.com/xy2/gw/13v2/images/schbg.jpg) no-repeat;}
+.fSearch .inpTxt {width: 301px;height: 29px;background: #f3eee5;font-size: 12px;line-height: 29px;color: #b2866b;padding-left: 10px;}
+.fSearch .inpBut {float: right;width: 68px;height: 30px;overflow: hidden;border: 0;text-indent: -9999px;cursor: pointer;background: none}
+
 footer{text-align:center;clear:both;height:66px;line-height:60px;position: relative;margin:0 auto;background: #070e1c;padding:10px 0}
 footer{color: #ecbf71}
 footer a{color:#ecbf71;text-decoration:none;}

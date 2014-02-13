@@ -15,7 +15,7 @@ $(function(){
         }
         $.Switch(".fSwitchNav a", ".fSwitchPic a");
 
-//        大话2
+//        大话2广告Banner
         nie.util.abc.load({promark: "lis9z", callBack: function () {
             var g = $("#switch-2").find("a"), f = $("#switchnav-1");
             g.each(function (j) {
@@ -24,7 +24,7 @@ $(function(){
             });
             $.Switch({btnDoms: [f.children("a")], imgDoms: [g]});
         }, type: "js"});
-//        天下3
+//        天下3广告Banner
         nie.util.abc.load({promark: "zrpnw", callBack: function () {
             var g = $("#banner-switch").find("a"), f = $("#switchnav-2").find("nav");
             g.each(function () {
@@ -41,6 +41,11 @@ $(function(){
     });
     $("#gotop").click(function () {
         $("html,body").animate({scrollTop:0},200);
+    })
+//    搜索版块
+    $('.fSearch').find('.inpBut').click(function(){
+        var val = $("#searchKeyWords1").val();
+        window.open(encodeURI("http://so.xy2.163.com/search?qs="+val));
     })
 })
 function scrollPics_tab(opt){
@@ -157,6 +162,7 @@ $('.aCloseQ').click(function(){
 //判断弹层类别
     switch (type){
         case '1':
+            popid.css({'height':h+'px','width':w+'px'});
             posPop(popid);
             break;
         case '2':
