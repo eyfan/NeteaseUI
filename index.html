@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=640" />
@@ -13,18 +13,19 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
+        $(document).ready(function () {
+            $('#main_content').headsmart()
+        })
     </script>
     <title>Neteaseui by fangge</title>
-  </head>
+</head>
 
-  <body>
-    <a id="forkme_banner" href="https://github.com/fangge/NeteaseUI">View on GitHub</a>
-    <div class="shell">
+<body>
+<a id="forkme_banner" href="https://github.com/fangge/NeteaseUI">View on GitHub</a>
 
-      <header>
+<div class="shell">
+
+    <header>
         <span class="ribbon-outer">
           <span class="ribbon-inner">
             <h1>Neteaseui</h1>
@@ -33,57 +34,112 @@
           <span class="left-tail"></span>
           <span class="right-tail"></span>
         </span>
-      </header>
+    </header>
 
-      <section id="downloads">
+    <section id="downloads">
         <span class="inner">
           <a href="https://github.com/fangge/NeteaseUI/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/fangge/NeteaseUI/tarball/master" class="tgz"><em>download</em> .TGZ</a>
         </span>
-      </section>
+    </section>
 
 
-      <span class="banner-fix"></span>
+    <span class="banner-fix"></span>
 
 
-      <section id="main_content">
+    <section id="main_content">
         <h1>
-<a name="neteaseui" class="anchor" href="#neteaseui"><span class="octicon octicon-link"></span></a>NeteaseUI</h1>
+            <a name="neteaseui" class="anchor" href="#neteaseui"><span class="octicon octicon-link"></span></a>NeteaseUI
+        </h1>
 
-<p>网易网站组官网相关UI制作
- </p><blockquote>为了方便今后的页面制作，特此做一个方便以后调用的UI库，来提高大家的工作效率</blockquote>
+        <p>网易网站组官网相关UI制作
+        </p>
+        <blockquote>为了方便今后的页面制作，特此做一个方便以后调用的UI库，来提高大家的工作效率</blockquote>
 
-<h2>
-<a name="%E7%9B%B8%E5%85%B3ui%E7%BB%84%E4%BB%B6" class="anchor" href="#%E7%9B%B8%E5%85%B3ui%E7%BB%84%E4%BB%B6"><span class="octicon octicon-link"></span></a><strong>相关UI组件</strong>
-</h2>
+        <h2>
+            <a name="%E7%9B%B8%E5%85%B3ui%E7%BB%84%E4%BB%B6" class="anchor"
+               href="#%E7%9B%B8%E5%85%B3ui%E7%BB%84%E4%BB%B6"><span class="octicon octicon-link"></span></a><strong>相关UI组件</strong>
+        </h2>
 
-<p>1.新闻列表</p>
+        <!--新闻列表-->
+        <blockquote>
+            <p><a href="ftxtList.html" target="_blank">新闻列表</a></p>
+            简单的新闻列表模块，包括栏目名称、新闻标题、发布时间
+        </blockquote>
 
-<p>2.图片列表</p>
+        <!--图片列表-->
+        <blockquote>
+            <p><a href="fpicList.html" target="_blank">图片列表</a></p>
+            简单的图片列表模块，左右对齐
+        </blockquote>
 
-<p>3.新闻切换</p>
 
-<p>4.Banner切换</p>
+        <!--新闻切换-->
+        <blockquote>
+            <p><a href="fTabNews.html" target="_blank">新闻切换</a></p>
+            新闻切换模块，适合一般官网的tab切换（可结合图片列表或者新闻列表）
+        </blockquote>
 
-<p>5.广告Banner切换</p>
 
-<p>5.回到顶部按钮</p>
+        <!--Banner切换-->
+        <blockquote>
+            <p><a href="fBanner.html" target="_blank">Banner切换</a></p>
+            Banner切换模块，包括两种，一种是switch，一种是click（也就是图片幻灯片）
+        </blockquote>
 
-<p>6.弹层合集（普通弹层、flash弹层、视频弹层）</p>
 
-<p>7.搜索版块</p>
+        <!--广告Banner切换-->
+        <blockquote>
+            <p><a href="fSmartBanner.html" target="_blank">广告Banner切换</a></p>
+            广告Banner切换，直接Smart系统输出
+        </blockquote>
 
-<p>8.滚动模块</p>
 
-<p>9.职业模块</p>
+        <!--回到顶部按钮-->
+        <blockquote>
+            <p><a href="fgoTop.html" target="_blank">回到顶部按钮（请看右边）</a></p>
+            通用的回到顶部按钮，初始隐藏，下拉后出现
+        </blockquote>
 
-<p>10.顶条功能条</p>
 
-<blockquote>
-<p>持续更新中...</p>
-</blockquote>
-      </section>
+        <!--弹层合集-->
+        <blockquote>
+            <p><a href="fpop.html" target="_blank">弹层合集（普通弹层、flash弹层、视频弹层）</a></p>
+            弹层插件，可以控制弹层的大小、传入flash地址，和flash的wmode，视频地址
+        </blockquote>
 
-      <footer>
+
+        <!--搜索模块-->
+        <blockquote>
+            <p><a href="fSearch.html" target="_blank">搜索模块</a></p>
+            简单的搜索模块，要用js是因为要转码，你懂的
+        </blockquote>
+
+
+        <!--滚动模块-->
+        <blockquote>
+            <p><a href="fMarquee.html" target="_blank">滚动模块</a></p>
+            滚动模块，横竖皆有，此模块用过多会影响页面效率，请慎用
+        </blockquote>
+
+
+        <!--职业模块-->
+        <blockquote>
+            <p><a href="fCareer.html" target="_blank">职业模块</a></p>
+            职业模块切换基本结构，万变不离其中
+        </blockquote>
+
+        <!--顶部功能条-->
+        <blockquote>
+            <p><a href="fTopBar.html" target="_blank">顶部功能条</a></p>
+            fab专用，可以直接复制整段代码后改样式即可，请滚动看效果，代码添加在最外层
+        </blockquote>
+
+        <blockquote>
+            <p>持续更新中...</p>
+        </blockquote>
+    </section>
+
+    <footer>
         <span class="ribbon-outer">
           <span class="ribbon-inner">
             <p>this project by <a href="https://github.com/fangge">fangge</a> can be found on <a href="https://github.com/fangge/NeteaseUI">GitHub</a></p>
@@ -93,20 +149,22 @@
         </span>
         <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
         <span class="octocat"></span>
-      </footer>
+    </footer>
 
-    </div>
+</div>
 
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("Netase UI");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("Netase UI");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }
+</script>
 
-  </body>
+
+</body>
 </html>
