@@ -1,0 +1,1174 @@
+@charset "gb2312";
+/* =s Reset (by YUI 3) */
+html {
+    color: #000;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+article, aside, audio, bdi, canvas, command, datalist, details, figcaption, figure, footer, header, hgroup, keygen, mark, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time, track, video, title {
+    display: block
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+input, textarea, select {
+    *font-size: 100%;
+}
+
+legend {
+    color: #000;
+}
+
+article a {
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+}
+
+/* =e Reset */
+/* =s base */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: "Microsoft YaHei", simSun, "Lucida Grande", "Lucida Sans Unicode", Arial;
+    line-height: 170%;
+    font-size: 12px;
+    color: #000;
+}
+
+i {
+    font-style: normal;
+}
+
+a {
+    color: #000;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+a.under:link, a.under:active, a.under:visited, a.under:hover {
+    text-decoration: underline;
+}
+
+/* float*/
+.fltL {
+    float: left;
+}
+
+.fltR {
+    float: right;
+}
+
+.fixR {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.setCenter {
+    margin: 0 auto;
+}
+
+/* clear */
+.clrB {
+    clear: both;
+}
+
+.clrL {
+    clear: left;
+}
+
+.clrR {
+    clear: right;
+}
+
+.clrN {
+    clear: none;
+}
+
+.g-clr {
+    zoom: 1;
+}
+
+.g-clr:after {
+    display: block;
+    clear: both;
+    height: 0;
+    content: "\0020";
+}
+
+/* =e base */
+
+/* =s Font */
+/* font-weight [first-letter]*/
+.b {
+    font-weight: bold;
+}
+
+.n {
+    font-weight: normal;
+}
+
+/* font-position [txt-P] */
+.txtC {
+    text-align: center;
+}
+
+.g-thide {
+    text-indent: -9999px;
+}
+
+.tRed {
+    color: #d50000
+}
+
+.hide {
+    display: none !important;
+}
+
+/* wrap */
+#wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1680px;
+    min-width: 960px;
+    margin: 0 auto;
+    _width: expression((document.documentElement.clientWidth>1680||document.body.clientWidth>1680)?"1680px":"100%");
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* wrapbackground*/
+#wrap1, #wrap2 {
+    width: 100%
+}
+
+/*#wrap1{background: url(../images/bg1.jpg) no-repeat  center 0;}*/
+/*#wrap2{background: url(../images/bg2.jpg) no-repeat center 579px;}*/
+
+#main {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    zoom: 1
+}
+
+/*新闻列表*/
+.ftxtList {
+    overflow: hidden
+}
+
+.fListWrap {
+    margin-bottom: -1px
+}
+
+.fListWrap li {
+    height: 20px;
+    padding: 5px 10px 4px 0;
+    border-bottom: 1px dotted #7d858a;
+    line-height: 20px;
+    text-align: right;
+}
+
+.fListWrap li span {
+    float: left;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+}
+
+.fListWrap li .sChannel {
+    width: 66px;
+    margin-right: 35px;
+    background: #72a547;
+    text-align: center;
+}
+
+.fListWrap li .sChannel a {
+    color: #fff
+}
+
+.fListWrap li .sTitle {
+    width: 260px;
+    text-align: left;
+}
+
+/*图片列表*/
+.fpicList {
+    overflow: hidden;
+}
+
+.fpicListWrap {
+    zoom: 1;
+    margin-right: -100px;
+}
+
+.fpicListWrap li {
+    float: left;
+    margin-right: 34px;
+    text-align: center
+}
+
+.fpicListWrap li p {
+    color: #070e1;
+    font-size: 16px
+}
+
+/*新闻切换*/
+.fTabNav {
+    height: 29px;
+    overflow: hidden;
+    background: #23b0eb;
+}
+
+.fTabNav li {
+    float: left;
+    width: 84px;
+    height: 29px;
+}
+
+.fTabNav li a {
+    display: block;
+    height: 27px;
+    border: 2px solid #23b0eb;
+    border-bottom: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+.fTabNav li.current a {
+    background: #dff1fb;
+    color: #23b0eb;
+}
+
+.fTabCont .ftxtList {
+    display: none
+}
+
+.fTabCont .current {
+    display: block
+}
+
+/*Banner切换*/
+/*--Switch切换*/
+.fSwitch {
+    width: 255px;
+    height: 235px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fSwitchPic {
+    position: relative;
+    width: 255px;
+    height: 235px;
+}
+
+.fSwitchPic a {
+    position: absolute;
+    display: block;
+    width: 255px;
+    height: 235px;
+}
+
+.fSwitchPic a:hover {
+    text-decoration: none;
+}
+
+.fSwitchPic a img {
+    display: block;
+    width: 255px;
+    height: 235px;
+}
+
+.fSwitchPic a span {
+    position: relative;
+    display: block;
+    height: 28px;
+    padding: 0 5px;
+    margin-top: -28px;
+    background: #333;
+    filter: Alpha(opacity=80);
+    opacity: 0.8;
+    color: #fff;
+    line-height: 28px;
+}
+
+.fSwitchNav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 14px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    z-index: 2;
+}
+
+.fSwitchNav a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-left: 6px;
+    width: 14px;
+    height: 14px;
+    background: #000;
+    text-align: center;
+    line-height: 14px;
+    color: #fff;
+    cursor: default;
+    font-size: 12px;
+}
+
+.fSwitchNav a:hover {
+    background: #d00;
+}
+
+.fSwitchNav a.current {
+    background: #d00;
+}
+
+/*--click切换*/
+#slideShow {
+    width: 631px;
+    height: 168px;
+    position: relative;
+    *zoom: 1;
+}
+
+#slideWrap {
+    width: 631px;
+    height: 168px;
+    position: relative;
+    overflow: hidden
+}
+
+#slideBtn a {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/slidebtn.png) no-repeat -9999px;
+    z-index: 99;
+    top: 65px;
+    cursor: pointer
+}
+
+#slideBtn #prev {
+    background-position: 0 0;
+    left: -14px
+}
+
+#slideBtn #next {
+    background-position: -27px 0;
+    right: -14px
+}
+
+#slideShow ul {
+    width: 9999px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+#slideShow li {
+    float: left;
+}
+
+#slideShow ul li {
+    width: 631px;
+}
+
+#slideShow ul li img {
+    display: block;
+    width: 631px;
+    height: 168px;
+}
+
+#slideShow ol {
+    width: 120px;
+    position: absolute;
+    bottom: 12px;
+    left: 105px;
+    z-index: 99
+}
+
+#slideShow ol li {
+    margin-right: 2px
+}
+
+#slideShow ol li a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/slidenav.png) no-repeat -10px 0
+}
+
+#slideShow ol li a.current {
+    background-position: 0 0
+}
+
+/*大话2广告Banner*/
+.xy2Banner {
+    width: 420px;
+    position: relative
+}
+
+.dSwitch2 {
+    position: relative;
+    width: 420px;
+    height: 240px;
+    overflow: hidden
+}
+
+.dSwitch2 a {
+    position: absolute;
+    display: block;
+    width: 420px;
+    height: 240px
+}
+
+.dSwitch2 img {
+    display: block;
+    width: 420px;
+    height: 240px
+}
+
+.dSwitchnav2 {
+    float: right;
+    position: relative;
+    display: inline;
+    height: 14px;
+    margin: -24px 10px 0 0;
+    z-index: 2;
+    text-align: right
+}
+
+.dSwitchnav2 a {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    margin-left: 4px;
+    background: #d5d5d5;
+    text-align: left;
+    color: #514e4a;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    line-height: 14px
+}
+
+.dSwitchnav2 a.current {
+    background: #b60000;
+    color: #ecbcbf
+}
+
+/*天下3广告Banner*/
+.SwitchPic {
+    width: 351px;
+    height: 168px;
+    overflow: hidden;
+    position: relative;
+}
+
+.SwitchPicWrap {
+    position: relative;
+    width: 351px;
+    height: 168px;
+}
+
+.SwitchPicShow {
+    position: absolute;
+    display: block;
+    width: 351px;
+    height: 168px;
+}
+
+.SwitchPicShow img {
+    display: block;
+    width: 352px;
+    height: 168px;
+}
+
+.SwitchPicNav {
+    width: 351px;
+    height: 22px;
+    line-height: 22px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.SwitchPicNav nav {
+    float: right;
+    margin-right: 10px;
+}
+
+.SwitchPicNavBtn {
+    display: inline-block;
+    margin-left: 6px;
+    width: 7px;
+    height: 7px;
+    background: url(http://res.nie.netease.com/tx3/zt/13/1120_show/images/switchbtn.png) no-repeat -7px 0;
+    text-align: center;
+    line-height: 14px;
+    color: #fff;
+    cursor: default;
+    font-size: 12px;
+}
+
+.SwitchPicNavBtn:hover, .SwitchPicNavBtn.current {
+    background-position: 0 0;
+}
+
+/*回到顶部*/
+#gotop {
+    position: absolute;
+    width: 20px;
+    height: 64px;
+    padding: 15px 7px;
+    background: #b40000;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+    top: 500px;
+    right: 0;
+    z-index: 99;
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+#gotop:hover {
+    text-decoration: none
+}
+
+/*弹层蒙版*/
+.dTc {
+    position: absolute;
+    zoom: 1;
+    top: 200px;
+    z-index: 999999
+}
+
+.aCloseQ {
+    display: block;
+    position: absolute;
+    right: 21px;
+    top: 27px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    text-indent: -9999px
+}
+
+#NIE-overlayer {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    filter: alpha(opacity=80);
+    opacity: .8;
+    top: 0;
+    left: 0;
+    z-index: 99
+}
+
+/*视频弹层*/
+.videoBox {
+    background: #000;
+}
+
+.videoBox .dialogCon {
+    overflow: hidden;
+    padding: 5px;
+}
+
+.videoBox .dVideoBox {
+    border: 1px solid #999;
+    padding: 4px;
+    background: #666;
+}
+
+.videoBox .aCloseQ {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    display: block;
+    right: -57px;
+    top: 0;
+    cursor: pointer;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url(http://res.nie.netease.com/tx3/gw/13v1/images/close.jpg) no-repeat 0 0;
+}
+
+/*搜索版块*/
+.fSearch {
+    width: 392px;
+    height: 31px;
+    padding: 14px;
+    margin: 0 auto;
+    background: url(http://res.nie.netease.com/xy2/gw/13v2/images/schbg.jpg) no-repeat;
+}
+
+.fSearch .inpTxt {
+    width: 301px;
+    height: 29px;
+    background: #f3eee5;
+    font-size: 12px;
+    line-height: 29px;
+    color: #b2866b;
+    padding-left: 10px;
+}
+
+.fSearch .inpBut {
+    float: right;
+    width: 68px;
+    height: 30px;
+    overflow: hidden;
+    border: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    background: none
+}
+
+/*滚动模块*/
+.fMarquee {
+    position: relative;
+    width: 275px;
+    height: 158px;
+    overflow: hidden;
+}
+
+.fMarquee .mar {
+    position: relative;
+    width: 275px;
+}
+
+#marquee2 {
+    height: 30px
+}
+
+#marquee2 ul {
+    width: 9999px
+}
+
+#marquee2 li {
+    float: left
+}
+
+/*职业切换*/
+.ftab, .ptab, .gtab {
+    display: none;
+}
+
+.fplayer .current {
+    display: block;
+}
+
+.fplayer {
+    width: 632px;
+    height: 479px;
+}
+
+.fplayer h4 {
+    display: none
+}
+
+.pnav, .pnav ul {
+    width: 632px;
+    height: 59px;
+}
+
+.pnav li, .pnav a {
+    float: left;
+    display: block;
+    width: 158px;
+    height: 59px;
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/tabshow.png) 0 -247px;
+    text-indent: -9999px;
+    cursor: default;
+}
+
+#pmenu2 {
+    background-position: -158px -247px;
+}
+
+#pmenu3 {
+    background-position: -316px -247px;
+}
+
+#pmenu4 {
+    background-position: -474px -247px;
+}
+
+.current #pmenu1 {
+    background-position: 0 -306px;
+}
+
+.current #pmenu2 {
+    background-position: -158px -307px;
+}
+
+.current #pmenu3 {
+    background-position: -316px -307px;
+}
+
+.current #pmenu4 {
+    background-position: -474px -307px;
+}
+
+.ptab {
+    position: relative;
+    width: 632px;
+    height: 391px;
+}
+
+.gtabs {
+    position: relative;
+    *zoom: 1;
+    z-index: 8
+}
+
+.gtab {
+    width: 632px;
+    height: 391px;
+}
+
+.goods {
+    width: 252px;
+    font-size: 14px;
+    z-index: 6;
+    color: #68eaff;
+    position: absolute;
+    right: -8px;
+    top: 69px;
+}
+
+.goods p {
+    height: 20px;
+    line-height: 20px;
+    color: #9c321d
+}
+
+.gifs {
+    position: absolute;
+    width: 247px;
+    height: 226px;
+    cursor: pointer;
+    right: 0;
+    bottom: 20px;
+}
+
+.gifs img {
+    display: block;
+    width: 247px;
+    height: 226px;
+}
+
+.gnav {
+    width: 60px;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    z-index: 99
+}
+
+.gnav li, .gnav a {
+    display: block;
+    height: 53px;
+    width: 60px;
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/role.png) 0 0;
+    text-indent: -9999px;
+    cursor: default;
+}
+
+.gnav li {
+    padding-bottom: 10px;
+    background: none;
+}
+
+.gmenu1, #gmenu1 {
+    background-position: 0 -312px;
+}
+
+.gmenu2, #gmenu2 {
+    background-position: 0 -363px;
+}
+
+.gmenu3, #gmenu3 {
+    background-position: 0 -415px;
+}
+
+.gmenu4, #gmenu4 {
+    background-position: 0 -467px;
+}
+
+.gmenu5, #gmenu5 {
+    background-position: 0 -519px;
+}
+
+.gmenu6, #gmenu6 {
+    background-position: 0 -572px;
+}
+
+#gmenu1.current {
+    background-position: 0 0;
+}
+
+#gmenu2.current {
+    background-position: 0 -52px;
+}
+
+#gmenu3.current {
+    background-position: 0 -104px;
+}
+
+#gmenu4.current {
+    background-position: 0 -156px;
+}
+
+#gmenu5.current {
+    background-position: 0 -208px;
+}
+
+#gmenu6.current {
+    background-position: 0 -260px;
+}
+
+.gtab_1 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_1.jpg) no-repeat bottom right;
+}
+
+.gtab_2 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_2.jpg) no-repeat bottom right;
+}
+
+.gtab_3 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_3.jpg) no-repeat bottom right;
+}
+
+.gtab_4 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_4.jpg) no-repeat bottom right;
+}
+
+.gtab_5 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_5.jpg) no-repeat bottom right;
+}
+
+.gtab_6 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_6.jpg) no-repeat bottom right;
+}
+
+.gmenu21, #gmenu21 {
+    background-position: -180px -312px;
+}
+
+.gmenu22, #gmenu22 {
+    background-position: -180px -363px;
+}
+
+.gmenu23, #gmenu23 {
+    background-position: -180px -415px;
+}
+
+.gmenu24, #gmenu24 {
+    background-position: -180px -467px;
+}
+
+.gmenu25, #gmenu25 {
+    background-position: -180px -519px;
+}
+
+.gmenu26, #gmenu26 {
+    background-position: -180px -572px;
+}
+
+#gmenu21.current {
+    background-position: -180px 0;
+}
+
+#gmenu22.current {
+    background-position: -180px -52px;
+}
+
+#gmenu23.current {
+    background-position: -180px -104px;
+}
+
+#gmenu24.current {
+    background-position: -180px -156px;
+}
+
+#gmenu25.current {
+    background-position: -180px -208px;
+}
+
+#gmenu26.current {
+    background-position: -180px -260px;
+}
+
+.gtab_21 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x1.jpg) no-repeat bottom right;
+}
+
+.gtab_22 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x2.jpg) no-repeat bottom right;
+}
+
+.gtab_23 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x3.jpg) no-repeat bottom right;
+}
+
+.gtab_24 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x4.jpg) no-repeat bottom right;
+}
+
+.gtab_25 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x5.jpg) no-repeat bottom right;
+}
+
+.gtab_26 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x6.jpg) no-repeat bottom right;
+}
+
+.gmenu31, #gmenu31 {
+    background-position: -120px -312px;
+}
+
+.gmenu32, #gmenu32 {
+    background-position: -120px -363px;
+}
+
+.gmenu33, #gmenu33 {
+    background-position: -120px -415px;
+}
+
+.gmenu34, #gmenu34 {
+    background-position: -120px -467px;
+}
+
+.gmenu35, #gmenu35 {
+    background-position: -120px -519px;
+}
+
+.gmenu36, #gmenu36 {
+    background-position: -120px -572px;
+}
+
+#gmenu31.current {
+    background-position: -120px 0;
+}
+
+#gmenu32.current {
+    background-position: -120px -52px;
+}
+
+#gmenu33.current {
+    background-position: -120px -104px;
+}
+
+#gmenu34.current {
+    background-position: -120px -156px;
+}
+
+#gmenu35.current {
+    background-position: -120px -208px;
+}
+
+#gmenu36.current {
+    background-position: -120px -260px;
+}
+
+.gtab_31 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m1.jpg) no-repeat bottom right;
+}
+
+.gtab_32 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m2.jpg) no-repeat bottom right;
+}
+
+.gtab_33 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m3.jpg) no-repeat bottom right;
+}
+
+.gtab_34 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m4.jpg) no-repeat bottom right;
+}
+
+.gtab_35 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m5.jpg) no-repeat bottom right;
+}
+
+.gtab_36 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m6.jpg) no-repeat bottom right;
+}
+
+.gmenu41, #gmenu41 {
+    background-position: -60px -312px;
+}
+
+.gmenu44, #gmenu42 {
+    background-position: -60px -363px;
+}
+
+.gmenu43, #gmenu43 {
+    background-position: -60px -415px;
+}
+
+.gmenu44, #gmenu44 {
+    background-position: -60px -467px;
+}
+
+.gmenu45, #gmenu45 {
+    background-position: -60px -519px;
+}
+
+.gmenu46, #gmenu46 {
+    background-position: -60px -572px;
+}
+
+#gmenu41.current {
+    background-position: -60px 0;
+}
+
+#gmenu42.current {
+    background-position: -60px -52px;
+}
+
+#gmenu43.current {
+    background-position: -60px -104px;
+}
+
+#gmenu44.current {
+    background-position: -60px -156px;
+}
+
+#gmenu45.current {
+    background-position: -60px -208px;
+}
+
+#gmenu46.current {
+    background-position: -60px -260px;
+}
+
+.gtab_41 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r1.jpg) no-repeat bottom right;
+}
+
+.gtab_42 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r2.jpg) no-repeat bottom right;
+}
+
+.gtab_43 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r3.jpg) no-repeat bottom right;
+}
+
+.gtab_44 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r4.jpg) no-repeat bottom right;
+}
+
+.gtab_45 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r5.jpg) no-repeat bottom right;
+}
+
+.gtab_46 {
+    background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r6.jpg) no-repeat bottom right;
+}
+
+footer {
+    text-align: center;
+    clear: both;
+    height: 66px;
+    line-height: 60px;
+    position: relative;
+    margin: 0 auto;
+    background: #070e1c;
+    padding: 10px 0
+}
+
+footer {
+    color: #ecbf71
+}
+
+footer a {
+    color: #ecbf71;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#NIE-copyRight {
+    z-index: 99999
+}
