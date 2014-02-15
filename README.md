@@ -10,6 +10,8 @@ NeteaseUI
 
  1.新闻列表
 
+ http://fangge.github.io/NeteaseUI/ftxtList.html
+
  2.图片列表
 
  3.新闻切换
