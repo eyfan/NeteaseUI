@@ -56,4 +56,8 @@ NeteaseUI
 
  http://multi-level-push-menu.make.rs/demo/basichtml/basichtml.html
 
+ 12.动态输出分享信息
+
+ http://fangge.github.io/NeteaseUI/fDyShare.html
+
  >持续更新中...
