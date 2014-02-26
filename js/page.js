@@ -5,7 +5,7 @@ $(function(){
         wrap: '#slideWrap',
         tab: '#slideShow ol a'
     });
-    nie.use(["ui.tab", 'ui.Switch',"ui.marquee2"], function () {
+    nie.use(["ui.tab", 'ui.Switch',"ui.marquee2","util.share"], function () {
 //        tab
         $.tab(".fTabNav li", ".fTabCont .ftxtList");
 //        职业切换
@@ -44,7 +44,44 @@ $(function(){
             $.marquee2("#marquee","top");
         }
        $.marquee2("#marquee2","left");
+//        动态输出分享内容
+        var share3=nie.util.share({
+		fat:".bshare",
+		type:2,
+		title:"#中国原创电竞被世界认可，WHYNOT！#我是中国玩家，我要为中国原创电竞正名！中国原创竞技大作《英雄三国》，更公平，告别4V5，告别挂机坑货。中国原创需要你我正确对待，星星之火可以燎原，让我们一起为中国原创电竞加油！",
+        content:"#中国原创电竞被世界认可，WHYNOT！#我是中国玩家，我要为中国原创电竞正名！中国原创竞技大作《英雄三国》，更公平，告别4V5，告别挂机坑货。中国原创需要你我正确对待，星星之火可以燎原，让我们一起为中国原创电竞加油！",
+        defShow: [5, 2, 3, 1],
+        img: ""
     });
+        var content="#中国原创电竞被世界认可，WHYNOT！#我是中国玩家，我要为中国原创电竞正名！中国原创竞技大作《英雄三国》，更公平，告别4V5，告别挂机坑货。中国原创需要你我正确对待，星星之火可以燎原，让我们一起为中国原创电竞加油！",choice=false;
+        $(".demon").click(function(){
+            if(choice==false){
+                $("textarea").val("#中国原创电竞被世界认可，WHYNOT！#我是中国玩家，我要为中国原创电竞正名！中国原创竞技大作《英雄三国》，更公平，告别4V5，告别挂机坑货。中国原创需要你我正确对待，星星之火可以燎原，让我们一起为中国原创电竞加油！");
+                $(this).addClass("check");
+                choice=true;
+            }else{
+                $(this).removeClass("check");
+                choice=false;
+            }
+        })
+        $("textarea").focus(function(){
+            if($("textarea").val()=="请在此输入您的宣言") $("textarea").val("");
+            choice=false;
+        }).blur(function(){
+                if($(this).val()!=content && $(this).val()!=""){
+                    share3.args.title="#中国原创电竞被世界认可，WHYNOT！#"+$(this).val();
+                    share3.args.content="#中国原创电竞被世界认可，WHYNOT！#"+$(this).val();
+                    $(".demon").removeClass("check");
+                    choice=false;
+                }else{
+                    $(".demon").addClass("check");
+                    choice=true;
+                }
+            });
+    });
+
+
+
 //    回到顶部
     $(window).scroll(function () {
         var scrollValue=$(window).scrollTop(),top=$("#gotop")
