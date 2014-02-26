@@ -1145,6 +1145,19 @@ a.under:link, a.under:active, a.under:visited, a.under:hover {
     background: url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r6.jpg) no-repeat bottom right;
 }
 
+/*动态输出分享内容*/
+.epic{float:left; margin:65px 0 0 45px; _margin-left:20px; width:325px; height:485px; border:5px solid #0082b8;}
+.edit{color:#000; font:14px "Microsoft Yahei"; font-weight:bold;}
+textarea{margin:10px 0 10px 0;  +margin-left:-40px; padding:10px; _padding:10px 20px 10px 40px; width:415px; height:160px; background:#1c1e20; border:none; color:#3cc7f5; font:12px "宋体"; line-height:25px; overflow:hidden;}
+.demon{margin:10px 0 0 0; padding:10px; width:415px; height:35px; border:2px solid #0082b8; background:#cecece; color:#363e4a; font:12px "宋体"; line-height:20px; cursor:pointer;}
+.check{background:url(http://res.nie.netease.com/yxsg/qt/13/0904_whynot/images/bingo.jpg) 415px 40px no-repeat #cecece;}
+.bshare{margin:25px 0 0 0; color:#b1ced2; font:20px "Microsoft Yahei"; width:437px; height:74px; background:url(http://res.nie.netease.com/yxsg/qt/13/0904_whynot/images/share.jpg) no-repeat;}
+.bshare .NIE-share-txt {display: none;}
+.bshare .NIE-share{margin:18px 0 0 146px; float:left;}
+.bshare .NIE-share-iconBtn a{margin-right:33px!important;}
+.bshare .NIE-share-more{display:none!important;}
+.bshare .NIE-share2 .NIE-share-iconBtn a img,.bshare .NIE-share2 .NIE-share-more em{background:none!important;}
+
 footer {
     text-align: center;
     clear: both;
