@@ -80,8 +80,6 @@ $(function(){
             });
     });
 
-
-
 //    回到顶部
     $(window).scroll(function () {
         var scrollValue=$(window).scrollTop(),top=$("#gotop")
@@ -183,7 +181,8 @@ function openD(opt){
             height: '',
             flashurl:'',
             videourl:'',
-            wmode: ''
+            wmode: '',
+            startImg:''
         },
         opt = opt || {};
     settings = $.extend(settings, opt);
@@ -193,6 +192,7 @@ function openD(opt){
         type = settings.type,
         w =parseInt(settings.width),
         h = parseInt(settings.height),
+        vimg = settings.startImg,
         furl = settings.flashurl,
         vurl = settings.videourl,
         wmode = settings.wmode,
@@ -215,7 +215,6 @@ $('.aCloseQ').click(function(){
 //判断弹层类别
     switch (type){
         case '1':
-            popid.css({'height':h+'px','width':w+'px'});
             posPop(popid);
             break;
         case '2':
@@ -245,6 +244,7 @@ $('.aCloseQ').click(function(){
                     mp4_movieUrl:vurl.replace(/\.(flv|f4v)/,'.mp4'),
                     width:w,
                     height:h,
+                    startImg:vimg,
                     bufferTime:5,
                     loopTimes:0,
                     wmode:"opaque",
