@@ -134,27 +134,13 @@ NeteaseUI
 
  还有一些不太常用的方法，可以参考http://jsdoc.nb.netease.com/ 。
 
- 除此之外，官网有一些常用效果并没有收入进库，为你推荐常用的效果，参考地址中均包含代码，以供参考：
- 1、弹窗
- 参考地址：http://dtws2.163.com/index.html
- 代码请参考：opendv()和closedv()
- 注：position统一为absolute，并加判断当弹窗高度大于浏览器高度时，置顶于浏览器，其他情况在页面正中。
- 此函数独立open和close两个函数，不要利用$().click(function(){})的形式，是为了能方便调用。
-
- 2、轮播
- 参考地址：http://dtws2.163.com/index.html
- 代码请参考：picScroll()
-
-
- 3、Png8图片修复
+ 13、Png8图片修复
  参考地址：http://jquery.andreaseberhard.de/pngFix/
  线上使用：http://x3.163.com/index.html
  请参考代码：DD_belatedPNG.fix
 
- 4、图片延迟加载
+ 14、图片延迟加载
  参考地址：http://wh.163.com/index.html
  代码请参考：nie.util.pageLoad
  注：用于图片较多且较长的页面，常用于官网。
 
- 5、搜索功能
- 参考地址：http://xyq.163.com/ （游戏百科搜索）http://x3.163.com/news/ （有道搜索）
