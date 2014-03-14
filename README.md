@@ -60,87 +60,22 @@ NeteaseUI
 
  http://fangge.github.io/NeteaseUI/fDyShare.html
 
- >持续更新中...
-
-
- **相关UI组件**
- --------------------
- 常用组件以及效果，熟悉掌握常用组件和效果，可以大大提高开发效率，并且有效达到标准
- 所有页面一定都要引入一个jquery(mixNIE).last.js ，这除了是一个轻量级的JS库，还有已封装好的组件功能和统计检测功能，其中包括：
-
- 1、TAB切换
- 使用方法：http://jsdoc.nb.netease.com/$.tab.html
- 参考地址：http://x3.163.com/index.html
- PS：带回调函数$.tab(".fnav a",".imgs > div",{fn:function(i){ }}）
-
- 2、 Swithch图片切换
- 使用方法：http://jsdoc.nb.netease.com/$.Switch.html
- 参考地址： http://x3.163.com/index.html
-
- 3、插入flash(需要先判断该浏览器是否支持flash)
- 使用方法：http://jsdoc.nb.netease.com/$.swfobject.html
- 参考地址：http://wh.163.com/index.html
-
- 4、插入视频，要保证f4v和mp4格式并存，特殊说明除外（使用jQuery组件nie.util.video）
- var video=nie.util.video($(".imgs"),{
-                     movieUrl:”地址”,
-                     mp4_movieUrl:”地址”,
-                     width:655,
-                     height:370,
-                     bufferTime:5,
-                     loopTimes:0,
-                     wmode:"transpant",
-                     volume:0.8,//默认0.8为参数值
-                     startImg:”地址”,
-                     autoPlay:false
-                 });
- video.change(movieURL);//改变视频地址
- video.pause();//暂停视频
- video.stop();//停止视频
- video.play();//播放视频
- video.destroy();//清空并销毁视频
-
- 5、回到顶部
- 使用方法：http://jsdoc.nb.netease.com/$.scrollTo.html
- 参考地址：http://xyq.163.com/introduce/cy002.html
-
- 6、光箱lightbox效果
- 使用方法：http://jsdoc.nb.netease.com/$.lightBox.html
- 参考地址：http://wh.163.com/
-
- 7、复制黏贴
- 使用方法：http://jsdoc.nb.netease.com/$.clipBoard.html
- 参考地址：http://x3.163.com/rank/
-
- 8、Marquee走马灯
- 使用方法：http://jsdoc.nb.netease.com/$.marquee2.html
- 参考地址：http://wh.163.com/
-
- 9、分享组件
- 使用方法：http://res.nie.netease.com/comm/js/nie/util/share/share.html
- 参考地址：http://xyq.163.com/chongyang/
-
- 10、注册功能
- 使用方法：http://res.nie.netease.com/comm/js/nie/util/qUrs/index.html
- 参考地址：http://wh.163.com/
-
- 11、获取服务器时间
- 使用方法：http://jsdoc.nb.netease.com/$.bjTime.html
- 参考地址：http://wh.163.com/
-
- 12、Cookie设置
- 使用方法：http://jsdoc.nb.netease.com/$.cookie.html
- 参考地址：global.js http://y3.163.com/db/hero/
-
- 还有一些不太常用的方法，可以参考http://jsdoc.nb.netease.com/ 。
-
- 13、Png8图片修复
- 参考地址：http://jquery.andreaseberhard.de/pngFix/
- 线上使用：http://x3.163.com/index.html
- 请参考代码：DD_belatedPNG.fix
-
- 14、图片延迟加载
+ 13. 图片延迟加载
  参考地址：http://wh.163.com/index.html
  代码请参考：nie.util.pageLoad
+ ```javascript
+         nie.util.pageLoad=nie.util.pageLoad||function(e){$(function(){var g=$(window),f={},h={},i=window.location.hash,j=function(){var c=g.scrollTop()-50,a=c+g.height()+50,d;for(d in f){var b=f[d],e=!1;if(b.b){if(b.y>=c&&b.y<=a||b.b>=c&&b.b<=a)e=!0}else b.y>=c&&b.y<=a&&(e=!0);e&&b.dom.attr("src",b.src)}for(d in h)b=h[d],(b.top>=c&&b.top<=a||b.bot>=c&&b.bot<=a)&&b.dom.attr("style","background-image:url("+b.src+")")};e.bgSelector&&$(e.bgSelector).each(function(c){var a=$(this),d=a.attr("data-bgUrl");if(d!=
+                 ""){var b=a.offset().top+parseInt($.browser.msie?a.css("background-position-y"):a.css("background-position").split(" ")[1]);h[c]={dom:a,src:d,top:b,bot:b+a.height()}}});e.imgSelector&&$(e.imgSelector).each(function(c){var a=$(this),d=a.attr("data-src");if(d!="")if(f[c]={dom:a,src:d,y:a.offset().top},a.css("height"))f[c].b=f[c].y+parseInt(a.css("height"));else if(a.attr("height"))f[c].b=f[c].y+parseInt(a.attr("height"))});g.scroll(j).resize(j);(i==""||$("a#"+i+"[name="+i+"]").length==0)&&j()})};
+         setTimeout(function(){
+             //优化加载
+             new nie.util.pageLoad({
+                 imgSelector:"img"
+             });
+         },0);
+
+ ```
  注：用于图片较多且较长的页面，常用于官网。
+
+ >持续更新中...
+
 
