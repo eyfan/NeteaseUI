@@ -2,62 +2,134 @@
 <html>
 <head>
     <title>NeteaseUI</title>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-    <meta charset="utf-8">
-    <!--é¡¹ç›®metaä¿¡æ¯ï¼Œè¯·ç¼–è¾‘æä¾› start-->
-    <meta name="author" content="ç½‘æ˜“ï¼ŒNetEase Inc."/>
-    <meta name="copyright" content="ç½‘æ˜“ï¼ŒNetEase Inc."/>
-    <meta name="pmid" content="274800"/>
-    <meta name="editor" content="Leon"/>
-    <meta name="designer" content="doudou,QQ,CP-D"/>
-    <meta name="front-end technicist" content="MrF"/>
-    <!--é¡¹ç›®metaä¿¡æ¯ï¼Œè¯·ç¼–è¾‘æä¾› end-->
-    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta charset="gb2312">
+    <!--ÏîÄ¿metaĞÅÏ¢£¬Çë±à¼­Ìá¹© start-->
+    <meta name="author" content="ÍøÒ×£¬NetEase Inc." />
+    <meta name="copyright" content="ÍøÒ×£¬NetEase Inc." />
+    <meta name="pmid" content="274800" />
+    <meta name="editor" content="Leon" />
+    <meta name="designer" content="doudou,QQ,CP-D" />
+    <meta name="front-end technicist" content="MrF" />
+    <!--ÏîÄ¿metaĞÅÏ¢£¬Çë±à¼­Ìá¹© end-->
+	<meta name="renderer" content="webkit">
     <link rel="dns-prefetch" href="http://res.nie.netease.com">
-    <!-- jquery mix NIE (æœ€æ–°ç‰ˆæœ¬ï¼‰-->
+    <!-- jquery mix NIE (×îĞÂ°æ±¾£©-->
     <script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
     <!--[if lt IE 9]>
     <script src="http://res.nie.netease.com/comm/html5/html5shiv.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="css/page.css"/>
-    <!--åº•éƒ¨ç‰ˆæƒé¢œè‰²å˜ç™½ï¼Œå¦‚æœæ­£å¸¸ï¼Œåˆ™å»æ‰ä»¥ä¸‹-->
+    <!--µ×²¿°æÈ¨ÑÕÉ«±ä°×£¬Èç¹ûÕı³££¬ÔòÈ¥µôÒÔÏÂ-->
     <script>nie.config.copyRight.setGray();</script>
     <style>
-        blockquote {
-            border-left-width: 10px;
-            background-color: rgba(102, 128, 153, 0.05);
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            padding: 15px 20px
-        }
+        blockquote{border-left-width:10px;background-color:rgba(102,128,153,0.05);border-top-right-radius:5px;border-bottom-right-radius:5px;padding:15px 20px}blockquote p{margin-bottom:15px;font-size:14px;line-height:1.428571429}
+        blockquote{padding:10px 20px;margin:20px 0 ;border-left:5px solid rgba(102,128,153,0.075)}
+        blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
+        blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
 
-        blockquote p {
-            margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 1.428571429
-        }
+        /*Ö°ÒµÇĞ»»*/
+        .ftab,.ptab,.gtab{display:none;}
+        .fplayer .current{display:block;}
+        .fplayer{ width: 632px; height: 479px;}
+        .fplayer h4{ display: none}
+        .pnav,.pnav ul{ width: 632px; height: 59px; }
+        .pnav li,.pnav a{float:left; display:block; width:158px;height:59px; background:url(http://res.nie.netease.com/xy2/fab/13v3/images/tabshow.png) 0 -247px; text-indent:-9999px; cursor:default;}
+        #pmenu2{ background-position:-158px -247px;}
+        #pmenu3{background-position:-316px -247px;}
+        #pmenu4{background-position:-474px -247px;}
+        .current #pmenu1{background-position:0 -306px;}
+        .current #pmenu2{background-position:-158px  -307px;}
+        .current #pmenu3{background-position:-316px -307px;}
+        .current #pmenu4{background-position:-474px -307px;}
+        .ptab{ position: relative; width:632px; height: 391px; }
+        .gtabs{position: relative;*zoom:1;z-index: 8}
+        .gtab{ width:632px; height: 391px;}
+        .goods{ width: 252px; font-size:14px; z-index: 6;color: #68eaff;position: absolute;right: -8px; top:69px;}
+        .goods p{ height: 20px; line-height: 20px; color: #9c321d}
+        .gifs{ position: absolute; width: 247px; height: 226px; cursor: pointer;right: 0;bottom: 20px;}
+        .gifs img{display: block;width: 247px;height: 226px;}
 
-        blockquote {
-            padding: 10px 20px;
-            margin: 20px 0;
-            border-left: 5px solid rgba(102, 128, 153, 0.075)
-        }
+        .gnav{ width: 60px; position: absolute; top: 12px; left: 15px; z-index: 99}
+        .gnav li,.gnav a{display:block; height:53px; width:60px; background:url(http://res.nie.netease.com/xy2/fab/13v3/images/role.png) 0 0; text-indent:-9999px; cursor:default;}
+        .gnav li{ padding-bottom:10px; background:none;}
+        .gmenu1,#gmenu1{background-position:0 -312px;}
+        .gmenu2,#gmenu2{background-position:0 -363px;}
+        .gmenu3,#gmenu3{background-position:0 -415px;}
+        .gmenu4,#gmenu4{background-position:0 -467px;}
+        .gmenu5,#gmenu5{background-position:0 -519px;}
+        .gmenu6,#gmenu6{background-position:0 -572px;}
+        #gmenu1.current{background-position:0 0;}
+        #gmenu2.current{background-position:0 -52px;}
+        #gmenu3.current{background-position:0 -104px;}
+        #gmenu4.current{background-position:0 -156px;}
+        #gmenu5.current{background-position:0 -208px;}
+        #gmenu6.current{background-position:0 -260px;}
+        .gtab_1{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_1.jpg) no-repeat bottom right;}
+        .gtab_2{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_2.jpg) no-repeat bottom right;}
+        .gtab_3{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_3.jpg) no-repeat bottom right;}
+        .gtab_4{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_4.jpg) no-repeat bottom right;}
+        .gtab_5{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_5.jpg) no-repeat bottom right;}
+        .gtab_6{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_6.jpg) no-repeat bottom right;}
 
-        blockquote p {
-            font-size: 18px;
-            font-weight: bold !important;
-            line-height: 1.25;
-        }
+        .gmenu21,#gmenu21{background-position:-180px -312px;}
+        .gmenu22,#gmenu22{background-position:-180px -363px;}
+        .gmenu23,#gmenu23{background-position:-180px -415px;}
+        .gmenu24,#gmenu24{background-position:-180px -467px;}
+        .gmenu25,#gmenu25{background-position:-180px -519px;}
+        .gmenu26,#gmenu26{background-position:-180px -572px;}
+        #gmenu21.current{background-position:-180px 0;}
+        #gmenu22.current{background-position:-180px -52px;}
+        #gmenu23.current{background-position:-180px -104px;}
+        #gmenu24.current{background-position:-180px -156px;}
+        #gmenu25.current{background-position:-180px -208px;}
+        #gmenu26.current{background-position:-180px -260px;}
+        .gtab_21{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x1.jpg) no-repeat bottom right;}
+        .gtab_22{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x2.jpg) no-repeat bottom right;}
+        .gtab_23{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x3.jpg) no-repeat bottom right;}
+        .gtab_24{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x4.jpg) no-repeat bottom right;}
+        .gtab_25{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x5.jpg) no-repeat bottom right;}
+        .gtab_26{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_x6.jpg) no-repeat bottom right;}
 
-        blockquote a {
-            font-size: 18px;
-            font-weight: bold !important;
-            line-height: 1.25;
-            color: #7492CE;
-            text-decoration: underline
-        }
+        .gmenu31,#gmenu31{background-position:-120px -312px;}
+        .gmenu32,#gmenu32{background-position:-120px -363px;}
+        .gmenu33,#gmenu33{background-position:-120px -415px;}
+        .gmenu34,#gmenu34{background-position:-120px -467px;}
+        .gmenu35,#gmenu35{background-position:-120px -519px;}
+        .gmenu36,#gmenu36{background-position:-120px -572px;}
+        #gmenu31.current{background-position:-120px 0;}
+        #gmenu32.current{background-position:-120px -52px;}
+        #gmenu33.current{background-position:-120px -104px;}
+        #gmenu34.current{background-position:-120px -156px;}
+        #gmenu35.current{background-position:-120px -208px;}
+        #gmenu36.current{background-position:-120px -260px;}
+        .gtab_31{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m1.jpg) no-repeat bottom right;}
+        .gtab_32{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m2.jpg) no-repeat bottom right;}
+        .gtab_33{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m3.jpg) no-repeat bottom right;}
+        .gtab_34{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m4.jpg) no-repeat bottom right;}
+        .gtab_35{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m5.jpg) no-repeat bottom right;}
+        .gtab_36{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_m6.jpg) no-repeat bottom right;}
 
+
+        .gmenu41,#gmenu41{background-position:-60px -312px;}
+        .gmenu44,#gmenu42{background-position:-60px -363px;}
+        .gmenu43,#gmenu43{background-position:-60px -415px;}
+        .gmenu44,#gmenu44{background-position:-60px -467px;}
+        .gmenu45,#gmenu45{background-position:-60px -519px;}
+        .gmenu46,#gmenu46{background-position:-60px -572px;}
+        #gmenu41.current{background-position:-60px 0;}
+        #gmenu42.current{background-position:-60px -52px;}
+        #gmenu43.current{background-position:-60px -104px;}
+        #gmenu44.current{background-position:-60px -156px;}
+        #gmenu45.current{background-position:-60px -208px;}
+        #gmenu46.current{background-position:-60px -260px;}
+        .gtab_41{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r1.jpg) no-repeat bottom right;}
+        .gtab_42{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r2.jpg) no-repeat bottom right;}
+        .gtab_43{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r3.jpg) no-repeat bottom right;}
+        .gtab_44{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r4.jpg) no-repeat bottom right;}
+        .gtab_45{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r5.jpg) no-repeat bottom right;}
+        .gtab_46{ background:url(http://res.nie.netease.com/xy2/fab/13v3/images/gtab_r6.jpg) no-repeat bottom right;}
     </style>
 </head>
 <body>
@@ -65,375 +137,309 @@
 <h1 class="hide">NeteaseUI</h1>
 <!--SEO start-->
 <div id="wrap">
-<div id="wrap1">
-<div id="wrap2">
-<div id="wrap3">
-<div id="main">
-<!--æ–°é—»åˆ—è¡¨-->
-<blockquote>
-    <p>èŒä¸šæ¨¡å—</p>
-    èŒä¸šæ¨¡å—åˆ‡æ¢åŸºæœ¬ç»“æ„ï¼Œä¸‡å˜ä¸ç¦»å…¶ä¸­<br>
-    <a href="index.html">å›åˆ°é¦–é¡µ</a>
-</blockquote>
-<div class="fplayer">
-<div class="pnav">
-    <ul>
-        <li class="pmenu"><a id="pmenu1" href="javascript:void(0)" class="current">é¬¼æ— æ”»å®ˆå…¼å¤‡</a></li>
-        <li class="pmenu"><a id="pmenu2" href="javascript:void(0)">ä»™æ— è¾“å‡ºè‡³ä¸Š</a></li>
-        <li class="pmenu"><a id="pmenu3" href="javascript:void(0)">é­”æ— é‡åœ¨è¾…åŠ©</a></li>
-        <li class="pmenu"><a id="pmenu4" href="javascript:void(0)">äººæ— æ§åˆ¶ä¸ºç‹</a></li>
-    </ul>
-</div>
-<div class="ptabs">
-<div class="ptab ptab_1 current">
-    <div class="gnav gnav1">
-        <ul>
-            <li class="gmenu1"><a id="gmenu1" href="javascript:void(0)" class="current">å¤œçµæºª</a></li>
-            <li class="gmenu2"><a id="gmenu2" href="javascript:void(0)">å¹½æ¢¦å½±</a></li>
-            <li class="gmenu3"><a id="gmenu3" href="javascript:void(0)">ç¥­å‰‘é­‚</a></li>
-            <li class="gmenu4"><a id="gmenu4" href="javascript:void(0)">çŒé­‚å¼•</a></li>
-            <li class="gmenu5"><a id="gmenu5" href="javascript:void(0)">å¢¨è¡£è¡Œ</a></li>
-            <li class="gmenu6"><a id="gmenu6" href="javascript:void(0)">æ— æ¶¯å­</a></li>
-        </ul>
-    </div>
-    <div class="gtabs gtabs1">
-        <div class="gtab gtab_1 current">
-            <div class="goods">
-                <h4>å¤œçµæºª</h4>
+    <div id="wrap1">
+        <div id="wrap2">
+            <div id="wrap3">
+                <div id="main">
+                    <!--ĞÂÎÅÁĞ±í-->
+                    <blockquote>
+                        <p>Ö°ÒµÄ£¿é</p>
+                        Ö°ÒµÄ£¿éÇĞ»»»ù±¾½á¹¹£¬Íò±ä²»ÀëÆäÖĞ<br>
+                        <a href="index.html">»Øµ½Ê×Ò³</a>
+                    </blockquote>
+                    <div class="fplayer">
+                    <div class="pnav">
+                        <ul>
+                            <li class="pmenu"><a id="pmenu1" href="javascript:void(0)" class="current">¹í×å ¹¥ÊØ¼æ±¸</a></li>
+                            <li class="pmenu"><a id="pmenu2" href="javascript:void(0)">ÏÉ×å Êä³öÖÁÉÏ</a></li>
+                            <li class="pmenu"><a id="pmenu3" href="javascript:void(0)">Ä§×å ÖØÔÚ¸¨Öú</a></li>
+                            <li class="pmenu"><a id="pmenu4" href="javascript:void(0)">ÈË×å ¿ØÖÆÎªÍõ</a></li>
+                        </ul>
+                    </div>
+                    <div class="ptabs">
+                    <div class="ptab ptab_1 current">
+                        <div class="gnav gnav1"><ul>
+                            <li class="gmenu1"><a id="gmenu1" href="javascript:void(0)" class="current">Ò¹ÁéÏª</a></li>
+                            <li class="gmenu2"><a id="gmenu2" href="javascript:void(0)">ÓÄÃÎÓ°</a></li>
+                            <li class="gmenu3"><a id="gmenu3" href="javascript:void(0)">¼À½£»ê</a></li>
+                            <li class="gmenu4"><a id="gmenu4" href="javascript:void(0)">ÁÔ»êÒı</a></li>
+                            <li class="gmenu5"><a id="gmenu5" href="javascript:void(0)">Ä«ÒÂĞĞ</a></li>
+                            <li class="gmenu6"><a id="gmenu6" href="javascript:void(0)">ÎŞÑÄ×Ó</a></li>
+                        </ul>
+                        </div>
+                        <div class="gtabs gtabs1">
+                            <div class="gtab gtab_1 current">
+                                <div class="goods">
+                                    <h4>Ò¹ÁéÏª</h4>
+                                    <p>ÉÃ ³¤£º¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå»Ø¸´5¸öµ¥Î»£¨ÄĞ¹í£©<br>
+                                        ÈºÌå¼Ó·À»òÈºÌå¿ØÖÆ7-8¸öµ¥Î»£¨Å®¹í£©</p>
+                                </div>
+                                <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g1.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
+                            </div>
+                            <div class="gtab gtab_2">
+                                <div class="goods">
+                                    <h4>ÓÄÃÎÓ°</h4>
+                                    <p>ÉÃ ³¤£º¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå»Ø¸´5¸öµ¥Î»£¨ÄĞ¹í£©<br>
+                                        ÈºÌå¼Ó·À»òÈºÌå¿ØÖÆ7-8¸öµ¥Î»£¨Å®¹í£©</p>
+                                </div>
+                                <img class="gifs"  data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g2.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_3">
+                                <div class="goods">
+                                    <h4>¼À½£»ê</h4>
+                                    <p>ÉÃ ³¤£º¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå»Ø¸´5¸öµ¥Î»£¨ÄĞ¹í£©<br>
+                                        ÈºÌå¼Ó·À»òÈºÌå¿ØÖÆ7-8¸öµ¥Î»£¨Å®¹í£©</p>
+                                </div>
+                                <img class="gifs"  data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g3.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_4">
+                                <div class="goods">
+                                    <h4>ÁÔ»êÒı</h4>
+                                    <p>ÉÃ ³¤£º¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå»Ø¸´5¸öµ¥Î»£¨ÄĞ¹í£©<br>
+                                        ÈºÌå¼Ó·À»òÈºÌå¿ØÖÆ7-8¸öµ¥Î»£¨Å®¹í£©</p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g4.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_5">
+                                <div class="goods">
+                                    <h4>Ä«ÒÂĞĞ</h4>
+                                    <p>ÉÃ ³¤£º¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå»Ø¸´5¸öµ¥Î»£¨ÄĞ¹í£©<br>
+                                        ÈºÌå¼Ó·À»òÈºÌå¿ØÖÆ7-8¸öµ¥Î»£¨Å®¹í£©</p>
+                                </div>
+                                <img class="gifs"  data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g5.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_6">
+                                <div class="goods">
+                                    <h4>ÎŞÑÄ×Ó</h4>
+                                    <p>ÉÃ ³¤£º¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå»Ø¸´5¸öµ¥Î»£¨ÄĞ¹í£©<br>
+                                        ÈºÌå¼Ó·À»òÈºÌå¿ØÖÆ7-8¸öµ¥Î»£¨Å®¹í£©</p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g6.gif"  src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </div>
 
-                <p>æ“… é•¿ï¼šè¾…åŠ©</p>
+                    <div class="ptab ptab_2">
+                        <div class="gnav gnav2">
+                            <ul>
+                                <li class="gmenu21"><a id="gmenu21" href="javascript:void(0)" class="current">ÉñÌì±ø</a></li>
+                                <li class="gmenu22"><a id="gmenu22" href="javascript:void(0)">ÎèÌì¼§</a></li>
+                                <li class="gmenu23"><a id="gmenu23" href="javascript:void(0)">ÖÇÊ¥ÏÉ</a></li>
+                                <li class="gmenu24"><a id="gmenu24" href="javascript:void(0)">¾«ÁéÏÉ</a></li>
+                                <li class="gmenu25"><a id="gmenu25" href="javascript:void(0)">ÁúÕ½½«</a></li>
+                                <li class="gmenu26"><a id="gmenu26" href="javascript:void(0)">Ğş½£¶ğ</a></li>
+                            </ul>
+                        </div>
+                        <div class="gtabs gtabs2">
+                            <div class="gtab gtab_21 current">
+                                <div class="goods">
+                                    <h4>ÉñÌì±ø</h4>
+                                    <p>ÉÃ ³¤£º·¨ÊõÊä³ö</p> <p>·¨ÊõÌØµã£ºÈºÌå·¨ÊõÉËº¦¿ÉÍ¬Ê±ÉËº¦5-6<br>¸öµ¥Î»</p>
+                                </div>
+                                <img class="gifs"  data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x1.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_22">
+                                <div class="goods">
+                                    <h4>ÎèÌì¼§</h4>
+                                    <p>ÉÃ ³¤£º·¨ÊõÊä³ö</p> <p>·¨ÊõÌØµã£ºÈºÌå·¨ÊõÉËº¦¿ÉÍ¬Ê±ÉËº¦5-6<br>¸öµ¥Î»</p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x2.gif"  src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
+                            </div>
+                            <div class="gtab gtab_23">
+                                <div class="goods">  <h4>ÖÇÊ¥ÏÉ</h4>
+                                    <p>ÉÃ ³¤£º·¨ÊõÊä³ö</p> <p>·¨ÊõÌØµã£ºÈºÌå·¨ÊõÉËº¦¿ÉÍ¬Ê±ÉËº¦5-6<br>¸öµ¥Î»</p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x3.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_24">
+                                <div class="goods">
+                                    <h4>¾«ÁéÏÉ</h4>
+                                    <p>ÉÃ ³¤£º·¨ÊõÊä³ö</p> <p>·¨ÊõÌØµã£ºÈºÌå·¨ÊõÉËº¦¿ÉÍ¬Ê±ÉËº¦5-6<br>¸öµ¥Î»</p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x4.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_25">
+                                <div class="goods">
+                                    <h4>ÁúÕ½½«</h4>
+                                    <p>ÉÃ ³¤£º·¨ÊõÊä³ö</p> <p>·¨ÊõÌØµã£ºÈºÌå·¨ÊõÉËº¦¿ÉÍ¬Ê±ÉËº¦5-6<br>¸öµ¥Î»</p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x5.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_26">
+                                <div class="goods">
+                                    <h4>Ğş½£¶ğ</h4>
+                                    <p>ÉÃ ³¤£º·¨ÊõÊä³ö</p> <p>·¨ÊõÌØµã£ºÈºÌå·¨ÊõÉËº¦¿ÉÍ¬Ê±ÉËº¦5-6<br>¸öµ¥Î»</p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x6.gif"  src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </div>
 
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“å›å¤5ä¸ªå•ä½ï¼ˆç”·é¬¼ï¼‰<br>
-                    ç¾¤ä½“åŠ é˜²æˆ–ç¾¤ä½“æ§åˆ¶7-8ä¸ªå•ä½ï¼ˆå¥³é¬¼ï¼‰</p>
+                    <div class="ptab ptab_3">
+                        <div class="gnav gnav3">
+                            <ul>
+                                <li class="gmenu31"><a id="gmenu31" href="javascript:void(0)" class="current">¶áÃüÑı</a></li>
+                                <li class="gmenu32"><a id="gmenu32" href="javascript:void(0)">ºüÃÀÈË</a></li>
+                                <li class="gmenu33"><a id="gmenu33" href="javascript:void(0)">»¢Í·¹Ö</a></li>
+                                <li class="gmenu34"><a id="gmenu34" href="javascript:void(0)">¹Ç¾«Áé</a></li>
+                                <li class="gmenu35"><a id="gmenu35" href="javascript:void(0)">¾ŞÄ§Íõ</a></li>
+                                <li class="gmenu36"><a id="gmenu36" href="javascript:void(0)">Ğ¡ÂùÑı</a></li>
+                            </ul>
+                        </div>
+                        <div class="gtabs gtabs3">
+                            <div class="gtab gtab_31 current">
+                                <div class="goods"> <h4>¶áÃüÑı</h4>
+                                    <p>ÉÃ ³¤£ºÎïÀí¹¥»÷+¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£º¿É¶Ô7-8¸öµ¥Î»Ôì³É50%×óÓÒµÄÉËº¦</p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m1.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_32">
+                                <div class="goods">
+                                    <h4>ºüÃÀÈË</h4>
+                                    <p>ÉÃ ³¤£ºÎïÀí¹¥»÷+¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£º¿É¶Ô7-8¸öµ¥Î»Ôì³É50%×óÓÒµÄÉËº¦</p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m2.gif"  src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
+                            </div>
+                            <div class="gtab gtab_33">
+                                <div class="goods">
+                                    <h4>»¢Í·¹Ö</h4>
+                                    <p>ÉÃ ³¤£ºÎïÀí¹¥»÷+¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£º¿É¶Ô7-8¸öµ¥Î»Ôì³É50%×óÓÒµÄÉËº¦</p>
+                                </div>
+                                <img class="gifs"  data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m3.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_34">
+                                <div class="goods">
+                                    <h4>¹Ç¾«Áé</h4>
+                                    <p>ÉÃ ³¤£ºÎïÀí¹¥»÷+¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£º¿É¶Ô7-8¸öµ¥Î»Ôì³É50%×óÓÒµÄÉËº¦</p>
+                                </div>
+                                <img class="gifs"  data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m4.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_35">
+                                <div class="goods">
+                                    <h4>¾ŞÄ§Íõ</h4>
+                                    <p>ÉÃ ³¤£ºÎïÀí¹¥»÷+¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£º¿É¶Ô7-8¸öµ¥Î»Ôì³É50%×óÓÒµÄÉËº¦</p>
+                                </div>
+                                <img class="gifs"  data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m5.gif"  src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
+                            </div>
+                            <div class="gtab gtab_36">
+                                <div class="goods">
+                                    <h4>Ğ¡ÂùÑı</h4>
+                                    <p>ÉÃ ³¤£ºÎïÀí¹¥»÷+¸¨Öú</p>
+                                    <p>·¨ÊõÌØµã£º¿É¶Ô7-8¸öµ¥Î»Ôì³É50%×óÓÒµÄÉËº¦</p>
+                                </div>
+                                <img class="gifs"  data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m6.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ptab ptab_4">
+                        <div class="gnav gnav4">
+                            <ul>
+                                <li class="gmenu41"><a id="gmenu41" href="javascript:void(0)" class="current">·ÉÑàÅ®</a></li>
+                                <li class="gmenu42"><a id="gmenu42" href="javascript:void(0)">åĞÒ£Éú</a></li>
+                                <li class="gmenu43"><a id="gmenu43" href="javascript:void(0)">Ó¢Å®ÏÀ</a></li>
+                                <li class="gmenu44"><a id="gmenu44" href="javascript:void(0)">½£ÏÀ¿Í</a></li>
+                                <li class="gmenu45"><a id="gmenu45" href="javascript:void(0)">ÃÍ×³Ê¿</a></li>
+                                <li class="gmenu46"><a id="gmenu46" href="javascript:void(0)">ÇÎÇ§½ğ</a></li>
+                            </ul>
+                        </div>
+                        <div class="gtabs gtabs4">
+                            <div class="gtab gtab_41 current">
+                                <div class="goods">
+                                    <h4>·ÉÑàÅ®</h4>
+                                    <p>ÉÃ ³¤£º¿ØÖÆÏµ·¨Êõ</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå¿ØÖÆ£¬¿ÉÍ¬Ê±¿ØÖÆ7-8¸öµ¥Î»
+                                    </p>
+                                </div>
+                                <img class="gifs"  data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r1.gif"  src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
+                            </div>
+                            <div class="gtab gtab_42">
+                                <div class="goods">
+                                    <h4>åĞÒ£Éú</h4>
+                                    <p>ÉÃ ³¤£º¿ØÖÆÏµ·¨Êõ</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå¿ØÖÆ£¬¿ÉÍ¬Ê±¿ØÖÆ7-8¸öµ¥Î»
+                                    </p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r2.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_43">
+                                <div class="goods">
+                                    <h4>Ó¢Å®ÏÀ</h4>
+                                    <p>ÉÃ ³¤£º¿ØÖÆÏµ·¨Êõ</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå¿ØÖÆ£¬¿ÉÍ¬Ê±¿ØÖÆ7-8¸öµ¥Î»
+                                    </p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r3.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_44">
+                                <div class="goods">
+                                    <h4>½£ÏÀ¿Í</h4>
+                                    <p>ÉÃ ³¤£º¿ØÖÆÏµ·¨Êõ</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå¿ØÖÆ£¬¿ÉÍ¬Ê±¿ØÖÆ7-8¸öµ¥Î»
+                                    </p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r4.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_45">
+                                <div class="goods">
+                                    <h4>ÃÍ×³Ê¿</h4>
+                                    <p>ÉÃ ³¤£º¿ØÖÆÏµ·¨Êõ</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå¿ØÖÆ£¬¿ÉÍ¬Ê±¿ØÖÆ7-8¸öµ¥Î»
+                                    </p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r5.gif" src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg"  alt=""/>
+                            </div>
+                            <div class="gtab gtab_46">
+                                <div class="goods">
+                                    <h4>ÇÎÇ§½ğ</h4>
+                                    <p>ÉÃ ³¤£º¿ØÖÆÏµ·¨Êõ</p>
+                                    <p>·¨ÊõÌØµã£ºÈºÌå¿ØÖÆ£¬¿ÉÍ¬Ê±¿ØÖÆ7-8¸öµ¥Î»
+                                    </p>
+                                </div>
+                                <img  class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r6.gif"  src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+
+                </div>
+
             </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g1.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_2">
-            <div class="goods">
-                <h4>å¹½æ¢¦å½±</h4>
-
-                <p>æ“… é•¿ï¼šè¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“å›å¤5ä¸ªå•ä½ï¼ˆç”·é¬¼ï¼‰<br>
-                    ç¾¤ä½“åŠ é˜²æˆ–ç¾¤ä½“æ§åˆ¶7-8ä¸ªå•ä½ï¼ˆå¥³é¬¼ï¼‰</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g2.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_3">
-            <div class="goods">
-                <h4>ç¥­å‰‘é­‚</h4>
-
-                <p>æ“… é•¿ï¼šè¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“å›å¤5ä¸ªå•ä½ï¼ˆç”·é¬¼ï¼‰<br>
-                    ç¾¤ä½“åŠ é˜²æˆ–ç¾¤ä½“æ§åˆ¶7-8ä¸ªå•ä½ï¼ˆå¥³é¬¼ï¼‰</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g3.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_4">
-            <div class="goods">
-                <h4>çŒé­‚å¼•</h4>
-
-                <p>æ“… é•¿ï¼šè¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“å›å¤5ä¸ªå•ä½ï¼ˆç”·é¬¼ï¼‰<br>
-                    ç¾¤ä½“åŠ é˜²æˆ–ç¾¤ä½“æ§åˆ¶7-8ä¸ªå•ä½ï¼ˆå¥³é¬¼ï¼‰</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g4.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_5">
-            <div class="goods">
-                <h4>å¢¨è¡£è¡Œ</h4>
-
-                <p>æ“… é•¿ï¼šè¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“å›å¤5ä¸ªå•ä½ï¼ˆç”·é¬¼ï¼‰<br>
-                    ç¾¤ä½“åŠ é˜²æˆ–ç¾¤ä½“æ§åˆ¶7-8ä¸ªå•ä½ï¼ˆå¥³é¬¼ï¼‰</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g5.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_6">
-            <div class="goods">
-                <h4>æ— æ¶¯å­</h4>
-
-                <p>æ“… é•¿ï¼šè¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“å›å¤5ä¸ªå•ä½ï¼ˆç”·é¬¼ï¼‰<br>
-                    ç¾¤ä½“åŠ é˜²æˆ–ç¾¤ä½“æ§åˆ¶7-8ä¸ªå•ä½ï¼ˆå¥³é¬¼ï¼‰</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role1/g6.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-    </div>
-</div>
-
-<div class="ptab ptab_2">
-    <div class="gnav gnav2">
-        <ul>
-            <li class="gmenu21"><a id="gmenu21" href="javascript:void(0)" class="current">ç¥å¤©å…µ</a></li>
-            <li class="gmenu22"><a id="gmenu22" href="javascript:void(0)">èˆå¤©å§¬</a></li>
-            <li class="gmenu23"><a id="gmenu23" href="javascript:void(0)">æ™ºåœ£ä»™</a></li>
-            <li class="gmenu24"><a id="gmenu24" href="javascript:void(0)">ç²¾çµä»™</a></li>
-            <li class="gmenu25"><a id="gmenu25" href="javascript:void(0)">é¾™æˆ˜å°†</a></li>
-            <li class="gmenu26"><a id="gmenu26" href="javascript:void(0)">ç„å‰‘å¨¥</a></li>
-        </ul>
-    </div>
-    <div class="gtabs gtabs2">
-        <div class="gtab gtab_21 current">
-            <div class="goods">
-                <h4>ç¥å¤©å…µ</h4>
-
-                <p>æ“… é•¿ï¼šæ³•æœ¯è¾“å‡º</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ³•æœ¯ä¼¤å®³å¯åŒæ—¶ä¼¤å®³5-6<br>ä¸ªå•ä½</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x1.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_22">
-            <div class="goods">
-                <h4>èˆå¤©å§¬</h4>
-
-                <p>æ“… é•¿ï¼šæ³•æœ¯è¾“å‡º</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ³•æœ¯ä¼¤å®³å¯åŒæ—¶ä¼¤å®³5-6<br>ä¸ªå•ä½</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x2.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_23">
-            <div class="goods"><h4>æ™ºåœ£ä»™</h4>
-
-                <p>æ“… é•¿ï¼šæ³•æœ¯è¾“å‡º</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ³•æœ¯ä¼¤å®³å¯åŒæ—¶ä¼¤å®³5-6<br>ä¸ªå•ä½</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x3.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_24">
-            <div class="goods">
-                <h4>ç²¾çµä»™</h4>
-
-                <p>æ“… é•¿ï¼šæ³•æœ¯è¾“å‡º</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ³•æœ¯ä¼¤å®³å¯åŒæ—¶ä¼¤å®³5-6<br>ä¸ªå•ä½</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x4.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_25">
-            <div class="goods">
-                <h4>é¾™æˆ˜å°†</h4>
-
-                <p>æ“… é•¿ï¼šæ³•æœ¯è¾“å‡º</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ³•æœ¯ä¼¤å®³å¯åŒæ—¶ä¼¤å®³5-6<br>ä¸ªå•ä½</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x5.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_26">
-            <div class="goods">
-                <h4>ç„å‰‘å¨¥</h4>
-
-                <p>æ“… é•¿ï¼šæ³•æœ¯è¾“å‡º</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ³•æœ¯ä¼¤å®³å¯åŒæ—¶ä¼¤å®³5-6<br>ä¸ªå•ä½</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role4/x6.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-    </div>
-</div>
-
-<div class="ptab ptab_3">
-    <div class="gnav gnav3">
-        <ul>
-            <li class="gmenu31"><a id="gmenu31" href="javascript:void(0)" class="current">å¤ºå‘½å¦–</a></li>
-            <li class="gmenu32"><a id="gmenu32" href="javascript:void(0)">ç‹ç¾äºº</a></li>
-            <li class="gmenu33"><a id="gmenu33" href="javascript:void(0)">è™å¤´æ€ª</a></li>
-            <li class="gmenu34"><a id="gmenu34" href="javascript:void(0)">éª¨ç²¾çµ</a></li>
-            <li class="gmenu35"><a id="gmenu35" href="javascript:void(0)">å·¨é­”ç‹</a></li>
-            <li class="gmenu36"><a id="gmenu36" href="javascript:void(0)">å°è›®å¦–</a></li>
-        </ul>
-    </div>
-    <div class="gtabs gtabs3">
-        <div class="gtab gtab_31 current">
-            <div class="goods"><h4>å¤ºå‘½å¦–</h4>
-
-                <p>æ“… é•¿ï¼šç‰©ç†æ”»å‡»+è¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šå¯å¯¹7-8ä¸ªå•ä½é€ æˆ50%å·¦å³çš„ä¼¤å®³</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m1.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_32">
-            <div class="goods">
-                <h4>ç‹ç¾äºº</h4>
-
-                <p>æ“… é•¿ï¼šç‰©ç†æ”»å‡»+è¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šå¯å¯¹7-8ä¸ªå•ä½é€ æˆ50%å·¦å³çš„ä¼¤å®³</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m2.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_33">
-            <div class="goods">
-                <h4>è™å¤´æ€ª</h4>
-
-                <p>æ“… é•¿ï¼šç‰©ç†æ”»å‡»+è¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šå¯å¯¹7-8ä¸ªå•ä½é€ æˆ50%å·¦å³çš„ä¼¤å®³</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m3.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_34">
-            <div class="goods">
-                <h4>éª¨ç²¾çµ</h4>
-
-                <p>æ“… é•¿ï¼šç‰©ç†æ”»å‡»+è¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šå¯å¯¹7-8ä¸ªå•ä½é€ æˆ50%å·¦å³çš„ä¼¤å®³</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m4.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_35">
-            <div class="goods">
-                <h4>å·¨é­”ç‹</h4>
-
-                <p>æ“… é•¿ï¼šç‰©ç†æ”»å‡»+è¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šå¯å¯¹7-8ä¸ªå•ä½é€ æˆ50%å·¦å³çš„ä¼¤å®³</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m5.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_36">
-            <div class="goods">
-                <h4>å°è›®å¦–</h4>
-
-                <p>æ“… é•¿ï¼šç‰©ç†æ”»å‡»+è¾…åŠ©</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šå¯å¯¹7-8ä¸ªå•ä½é€ æˆ50%å·¦å³çš„ä¼¤å®³</p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role3/m6.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-    </div>
-</div>
-
-<div class="ptab ptab_4">
-    <div class="gnav gnav4">
-        <ul>
-            <li class="gmenu41"><a id="gmenu41" href="javascript:void(0)" class="current">é£ç‡•å¥³</a></li>
-            <li class="gmenu42"><a id="gmenu42" href="javascript:void(0)">é€é¥ç”Ÿ</a></li>
-            <li class="gmenu43"><a id="gmenu43" href="javascript:void(0)">è‹±å¥³ä¾ </a></li>
-            <li class="gmenu44"><a id="gmenu44" href="javascript:void(0)">å‰‘ä¾ å®¢</a></li>
-            <li class="gmenu45"><a id="gmenu45" href="javascript:void(0)">çŒ›å£®å£«</a></li>
-            <li class="gmenu46"><a id="gmenu46" href="javascript:void(0)">ä¿åƒé‡‘</a></li>
-        </ul>
-    </div>
-    <div class="gtabs gtabs4">
-        <div class="gtab gtab_41 current">
-            <div class="goods">
-                <h4>é£ç‡•å¥³</h4>
-
-                <p>æ“… é•¿ï¼šæ§åˆ¶ç³»æ³•æœ¯</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ§åˆ¶ï¼Œå¯åŒæ—¶æ§åˆ¶7-8ä¸ªå•ä½
-                </p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r1.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_42">
-            <div class="goods">
-                <h4>é€é¥ç”Ÿ</h4>
-
-                <p>æ“… é•¿ï¼šæ§åˆ¶ç³»æ³•æœ¯</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ§åˆ¶ï¼Œå¯åŒæ—¶æ§åˆ¶7-8ä¸ªå•ä½
-                </p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r2.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_43">
-            <div class="goods">
-                <h4>è‹±å¥³ä¾ </h4>
-
-                <p>æ“… é•¿ï¼šæ§åˆ¶ç³»æ³•æœ¯</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ§åˆ¶ï¼Œå¯åŒæ—¶æ§åˆ¶7-8ä¸ªå•ä½
-                </p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r3.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_44">
-            <div class="goods">
-                <h4>å‰‘ä¾ å®¢</h4>
-
-                <p>æ“… é•¿ï¼šæ§åˆ¶ç³»æ³•æœ¯</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ§åˆ¶ï¼Œå¯åŒæ—¶æ§åˆ¶7-8ä¸ªå•ä½
-                </p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r4.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_45">
-            <div class="goods">
-                <h4>çŒ›å£®å£«</h4>
-
-                <p>æ“… é•¿ï¼šæ§åˆ¶ç³»æ³•æœ¯</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ§åˆ¶ï¼Œå¯åŒæ—¶æ§åˆ¶7-8ä¸ªå•ä½
-                </p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r5.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
-        </div>
-        <div class="gtab gtab_46">
-            <div class="goods">
-                <h4>ä¿åƒé‡‘</h4>
-
-                <p>æ“… é•¿ï¼šæ§åˆ¶ç³»æ³•æœ¯</p>
-
-                <p>æ³•æœ¯ç‰¹ç‚¹ï¼šç¾¤ä½“æ§åˆ¶ï¼Œå¯åŒæ—¶æ§åˆ¶7-8ä¸ªå•ä½
-                </p>
-            </div>
-            <img class="gifs" data-src="http://res.nie.netease.com/xy2/fab/13v3/images/role2/r6.gif"
-                 src="http://res.nie.netease.com/xy2/fab/13v3/images/gifshow.jpg" alt=""/>
         </div>
     </div>
-</div>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-</div>
 </div>
 
 <div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    nie.use(["ui.tab"], function () {
+//        Ö°ÒµÇĞ»»
+        $.tab(".pnav li",".ptabs > div");
+        $.tab(".gnav1 a",".gtabs1 > div");
+        $.tab(".gnav2 a",".gtabs2 > div");
+        $.tab(".gnav3 a",".gtabs3 > div");
+        $.tab(".gnav4 a",".gtabs4 > div");
+        $('.gifs').click(function(){
+            var imgurl = $(this).attr('data-src');
+            $(this).attr('src',imgurl);
+        })
+    })
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">
-    $(function () {
+    $(function(){
         $.fixPNG.fix('.png64');
     })
 

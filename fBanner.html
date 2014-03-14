@@ -4,7 +4,7 @@
     <title>NeteaseUI</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <meta charset="utf-8">
+    <meta charset="gb2312">
     <!--项目meta信息，请编辑提供 start-->
     <meta name="author" content="网易，NetEase Inc." />
     <meta name="copyright" content="网易，NetEase Inc." />
@@ -29,6 +29,32 @@
         blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
         blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
 
+        /*Banner切换*/
+        /*--Switch切换*/
+        .fSwitch {  width: 255px; height: 235px; overflow: hidden;position:relative;}
+        .fSwitchPic { position: relative; width: 255px; height: 235px; }
+        .fSwitchPic a { position: absolute; display: block; width:255px; height: 235px; }
+        .fSwitchPic a:hover { text-decoration: none; }
+        .fSwitchPic a img { display: block; width: 255px; height:235px; }
+        .fSwitchPic a span { position: relative; display: block; height: 28px; padding: 0 5px; margin-top: -28px; background: #333; filter: Alpha(opacity=80); opacity: 0.8; color: #fff; line-height: 28px; }
+        .fSwitchNav {position:absolute;right:0;bottom:0;height: 14px;padding-right:8px;padding-bottom:8px;z-index: 2; }
+        .fSwitchNav a { display: inline-block;*display:inline;*zoom:1;margin-left:6px;width: 14px; height: 14px; background: #000; text-align: center; line-height: 14px; color: #fff; cursor: default;font-size:12px;}
+        .fSwitchNav a:hover { background: #d00; }
+        .fSwitchNav a.current { background: #d00; }
+        /*--click切换*/
+        #slideShow{width: 631px;height: 168px;position: relative;*zoom:1;}
+        #slideWrap{width: 631px;height: 168px;position: relative;overflow:hidden}
+        #slideBtn a{position: absolute;width: 28px;height: 28px;background: url(http://res.nie.netease.com/xy2/fab/13v3/images/slidebtn.png) no-repeat -9999px;z-index: 99;top:65px;cursor: pointer}
+        #slideBtn #prev{background-position:0 0;left:-14px}
+        #slideBtn #next{background-position:-27px 0;right:-14px}
+        #slideShow ul{width: 9999px;position: absolute;top:0;left:0}
+        #slideShow li{float: left;}
+        #slideShow ul li{width: 631px;}
+        #slideShow ul li img{display: block;width: 631px;height: 168px;}
+        #slideShow ol{width:120px;position: absolute;bottom: 12px;left: 105px;z-index: 99}
+        #slideShow ol li{margin-right: 2px}
+        #slideShow ol li a{display: block;width: 10px;height: 10px;background: url(http://res.nie.netease.com/xy2/fab/13v3/images/slidenav.png) no-repeat -10px 0}
+        #slideShow ol li a.current{background-position: 0 0}
     </style>
 </head>
 <body>
@@ -92,7 +118,95 @@
 </div>
 
 <div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    $(function(){
+//    scroll
+        scrollPics_tab({
+            currentTarget:'#slideShow',
+            wrap: '#slideWrap',
+            tab: '#slideShow ol a'
+        });
+        nie.use([ 'ui.Switch'], function () {
+//        switch
+            for (var i = 0; i < $(".fSwitchPic a").length; i++) {
+                nums = i + 1;
+                $(".fSwitchNav").append("<a>" + nums + "</a>")
+            }
+            $.Switch(".fSwitchNav a", ".fSwitchPic a");
+        })
+    })
+    function scrollPics_tab(opt){
+        //只针对一个tab con
+        var settings = {
+                    currentTarget: '',
+                    autoplay : true,
+                    minNum: 1,
+                    time: 5000,
+                    tab: ''
+                },
+                opt = opt || {};
+        settings = $.extend(settings, opt);
+
+        var $currentTarget = $(settings.currentTarget),
+                $wrap = $(settings.wrap),
+                ul = $wrap.find("ul"),
+                li_len = ul.find("li").length,
+                li_w = ul.find("li").width(),
+                left = $currentTarget.find("#prev"),
+                right = $currentTarget.find("#next"),
+                tab = $(settings.tab),
+                timer = null,
+                currentIndex = 0;
+        tab.eq(currentIndex).addClass('current');
+
+        if(li_len > settings.minNum){
+            right.click(function() {
+                currentIndex++;
+                if(currentIndex == li_len){
+                    currentIndex = 0;
+                }
+                tab.removeClass('current').eq(currentIndex).addClass('current');
+
+                ul.stop().animate({
+                    "left": -(li_w*currentIndex)
+                }, 150)
+            });
+            left.click(function() {
+                currentIndex--;
+                if(currentIndex < 0){
+                    currentIndex = li_len - 1;
+                }
+                tab.removeClass('current').eq(currentIndex).addClass('current');
+
+                ul.stop().animate({
+                    "left": -(li_w*currentIndex)
+                }, 300)
+            });
+            tab.click(function(){
+                currentIndex = $(this).index(settings.tab);
+                tab.removeClass('current').eq(currentIndex).addClass('current');
+                ul.stop().animate({
+                    "left": -(li_w*currentIndex)
+                }, 300)
+            });
+            if (settings.autoplay) {
+                timer = setInterval(function() {
+                    right.trigger("click");
+                }, settings.time);
+                $wrap.mouseenter(function() {
+                    clearInterval(timer);
+                })
+                $wrap.mouseleave(function() {
+                    clearInterval(timer);
+                    timer = setInterval(function() {
+                        right.trigger("click");
+                    }, settings.time);
+                })
+            };
+        }
+    }
+
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">

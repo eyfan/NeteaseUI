@@ -2,62 +2,51 @@
 <html>
 <head>
     <title>NeteaseUI</title>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-    <meta charset="utf-8">
-    <!--È°πÁõÆmeta‰ø°ÊÅØÔºåËØ∑ÁºñËæëÊèê‰æõ start-->
-    <meta name="author" content="ÁΩëÊòìÔºåNetEase Inc."/>
-    <meta name="copyright" content="ÁΩëÊòìÔºåNetEase Inc."/>
-    <meta name="pmid" content="274800"/>
-    <meta name="editor" content="Leon"/>
-    <meta name="designer" content="doudou,QQ,CP-D"/>
-    <meta name="front-end technicist" content="MrF"/>
-    <!--È°πÁõÆmeta‰ø°ÊÅØÔºåËØ∑ÁºñËæëÊèê‰æõ end-->
-    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta charset="gb2312">
+    <!--œÓƒømeta–≈œ¢£¨«Î±‡º≠Ã·π© start-->
+    <meta name="author" content="Õ¯“◊£¨NetEase Inc." />
+    <meta name="copyright" content="Õ¯“◊£¨NetEase Inc." />
+    <meta name="pmid" content="274800" />
+    <meta name="editor" content="Leon" />
+    <meta name="designer" content="doudou,QQ,CP-D" />
+    <meta name="front-end technicist" content="MrF" />
+    <!--œÓƒømeta–≈œ¢£¨«Î±‡º≠Ã·π© end-->
+	<meta name="renderer" content="webkit">
     <link rel="dns-prefetch" href="http://res.nie.netease.com">
-    <!-- jquery mix NIE (ÊúÄÊñ∞ÁâàÊú¨Ôºâ-->
+    <!-- jquery mix NIE (◊Ó–¬∞Ê±æ£©-->
     <script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
     <!--[if lt IE 9]>
     <script src="http://res.nie.netease.com/comm/html5/html5shiv.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="css/page.css"/>
-    <!--Â∫ïÈÉ®ÁâàÊùÉÈ¢úËâ≤ÂèòÁôΩÔºåÂ¶ÇÊûúÊ≠£Â∏∏ÔºåÂàôÂéªÊéâ‰ª•‰∏ã-->
+    <!--µ◊≤ø∞Ê»®—’…´±‰∞◊£¨»Áπ˚’˝≥££¨‘Ú»•µÙ“‘œ¬-->
     <script>nie.config.copyRight.setGray();</script>
     <style>
-        blockquote {
-            border-left-width: 10px;
-            background-color: rgba(102, 128, 153, 0.05);
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            padding: 15px 20px
-        }
+        blockquote{border-left-width:10px;background-color:rgba(102,128,153,0.05);border-top-right-radius:5px;border-bottom-right-radius:5px;padding:15px 20px}blockquote p{margin-bottom:15px;font-size:14px;line-height:1.428571429}
+        blockquote{padding:10px 20px;margin:20px 0 ;border-left:5px solid rgba(102,128,153,0.075)}
+        blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
+        blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
 
-        blockquote p {
-            margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 1.428571429
-        }
+        /*¥Ûª∞2π„∏ÊBanner*/
+        .xy2Banner{width: 420px;position: relative}
+        .dSwitch2{position:relative;width:420px;height:240px;overflow:hidden}
+        .dSwitch2 a{position:absolute;display:block;width:420px;height:240px}
+        .dSwitch2 img{display:block;width:420px;height:240px}
+        .dSwitchnav2{float:right;position:relative;display:inline;height:14px;margin:-24px 10px 0 0;z-index:2;text-align:right}
+        .dSwitchnav2 a{display:inline-block;width:14px;height:14px;overflow:hidden;margin-left:4px;background:#d5d5d5;text-align:left;color:#514e4a;cursor:pointer;font-size:12px;text-align:center;line-height:14px}
+        .dSwitchnav2 a.current{background:#b60000;color:#ecbcbf}
 
-        blockquote {
-            padding: 10px 20px;
-            margin: 20px 0;
-            border-left: 5px solid rgba(102, 128, 153, 0.075)
-        }
-
-        blockquote p {
-            font-size: 18px;
-            font-weight: bold !important;
-            line-height: 1.25;
-        }
-
-        blockquote a {
-            font-size: 18px;
-            font-weight: bold !important;
-            line-height: 1.25;
-            color: #7492CE;
-            text-decoration: underline
-        }
-
+        /*ÃÏœ¬3π„∏ÊBanner*/
+        .SwitchPic {width: 351px;height: 168px;overflow: hidden;position: relative;}
+        .SwitchPicWrap {position: relative;width: 351px;height: 168px;}
+        .SwitchPicShow {position: absolute;display: block;width: 351px;height: 168px;}
+        .SwitchPicShow img {display: block;width: 352px;height: 168px;}
+        .SwitchPicNav {width: 351px;height: 22px;line-height: 22px;position: absolute;right: 0;bottom: 0; z-index: 2;}
+        .SwitchPicNav nav {float: right;margin-right: 10px;}
+        .SwitchPicNavBtn {display: inline-block;margin-left: 6px;width: 7px;height: 7px;background: url(http://res.nie.netease.com/tx3/zt/13/1120_show/images/switchbtn.png) no-repeat -7px 0;text-align: center;line-height: 14px;color: #fff;cursor: default;font-size: 12px;}
+        .SwitchPicNavBtn:hover, .SwitchPicNavBtn.current {background-position: 0 0;}
     </style>
 </head>
 <body>
@@ -69,27 +58,25 @@
         <div id="wrap2">
             <div id="wrap3">
                 <div id="main">
-                    <!--Êñ∞ÈóªÂàóË°®-->
+                    <!--–¬Œ≈¡–±Ì-->
                     <blockquote>
-                        <p>ÂπøÂëäBannerÂàáÊç¢</p>
-                        ÂπøÂëäBannerÂàáÊç¢ÔºåÁõ¥Êé•SmartÁ≥ªÁªüËæìÂá∫<br>
-                        <a href="index.html">ÂõûÂà∞È¶ñÈ°µ</a>
+                        <p>π„∏ÊBanner«–ªª</p>
+                        π„∏ÊBanner«–ªª£¨÷±Ω”SmartœµÕ≥ ‰≥ˆ<br>
+                        <a href="index.html">ªÿµΩ ◊“≥</a>
                     </blockquote>
-                    <!--Â§ßËØù2-->
+                    <!--¥Ûª∞2-->
                     <section class="xy2Banner">
                         <div class="dSwitch2" id="switch-2"></div>
                         <div class="dSwitchnav2" id="switchnav-1"></div>
                     </section>
                     <br>
-                    <!--Â§©‰∏ã3-->
+                    <!--ÃÏœ¬3-->
                     <section class="SwitchPic">
-                        <article class="SwitchPicWrap">
-                            <ul id="banner-switch"></ul>
-                        </article>
-                        <aside class="SwitchPicNav" id="switchnav-2">
-                            <nav></nav>
-                        </aside>
+                        <article class="SwitchPicWrap"><ul  id="banner-switch"></ul></article>
+                        <aside class="SwitchPicNav" id="switchnav-2"><nav></nav></aside>
                     </section>
+
+
 
 
                 </div>
@@ -100,11 +87,33 @@
 </div>
 
 <div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    nie.use([ 'ui.Switch'], function () {
+//        ¥Ûª∞2π„∏ÊBanner
+        nie.util.abc.load({promark: "lis9z", callBack: function () {
+            var g = $("#switch-2").find("a"), f = $("#switchnav-1");
+            g.each(function (j) {
+                var h = j + 1;
+                f.append("<a>" + h + "</a>")
+            });
+            $.Switch({btnDoms: [f.children("a")], imgDoms: [g]});
+        }, type: "js"});
+        //        ÃÏœ¬3π„∏ÊBanner
+        nie.util.abc.load({promark: "zrpnw", callBack: function () {
+            var g = $("#banner-switch").find("a"), f = $("#switchnav-2").find("nav");
+            g.each(function () {
+                $(this).addClass('SwitchPicShow');
+                f.append("<a class='SwitchPicNavBtn sprite sprite-switchnav'></a>")
+            });
+            $.Switch({btnDoms: [f.children("a")], imgDoms: [g]})
+        }, type: "js"})
+    })
+
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">
-    $(function () {
+    $(function(){
         $.fixPNG.fix('.png64');
     })
 

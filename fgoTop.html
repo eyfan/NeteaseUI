@@ -2,62 +2,42 @@
 <html>
 <head>
     <title>NeteaseUI</title>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-    <meta charset="utf-8">
-    <!--é¡¹ç›®metaä¿¡æ¯ï¼Œè¯·ç¼–è¾‘æä¾› start-->
-    <meta name="author" content="ç½‘æ˜“ï¼ŒNetEase Inc."/>
-    <meta name="copyright" content="ç½‘æ˜“ï¼ŒNetEase Inc."/>
-    <meta name="pmid" content="274800"/>
-    <meta name="editor" content="Leon"/>
-    <meta name="designer" content="doudou,QQ,CP-D"/>
-    <meta name="front-end technicist" content="MrF"/>
-    <!--é¡¹ç›®metaä¿¡æ¯ï¼Œè¯·ç¼–è¾‘æä¾› end-->
-    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta charset="gb2312">
+    <!--ÏîÄ¿metaĞÅÏ¢£¬Çë±à¼­Ìá¹© start-->
+    <meta name="author" content="ÍøÒ×£¬NetEase Inc." />
+    <meta name="copyright" content="ÍøÒ×£¬NetEase Inc." />
+    <meta name="pmid" content="274800" />
+    <meta name="editor" content="Leon" />
+    <meta name="designer" content="doudou,QQ,CP-D" />
+    <meta name="front-end technicist" content="MrF" />
+    <!--ÏîÄ¿metaĞÅÏ¢£¬Çë±à¼­Ìá¹© end-->
+	<meta name="renderer" content="webkit">
     <link rel="dns-prefetch" href="http://res.nie.netease.com">
-    <!-- jquery mix NIE (æœ€æ–°ç‰ˆæœ¬ï¼‰-->
+    <!-- jquery mix NIE (×îĞÂ°æ±¾£©-->
     <script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
     <!--[if lt IE 9]>
     <script src="http://res.nie.netease.com/comm/html5/html5shiv.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="css/page.css"/>
-    <!--åº•éƒ¨ç‰ˆæƒé¢œè‰²å˜ç™½ï¼Œå¦‚æœæ­£å¸¸ï¼Œåˆ™å»æ‰ä»¥ä¸‹-->
+    <!--µ×²¿°æÈ¨ÑÕÉ«±ä°×£¬Èç¹ûÕı³££¬ÔòÈ¥µôÒÔÏÂ-->
     <script>nie.config.copyRight.setGray();</script>
     <style>
-        blockquote {
-            border-left-width: 10px;
-            background-color: rgba(102, 128, 153, 0.05);
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            padding: 15px 20px
-        }
+        blockquote{border-left-width:10px;background-color:rgba(102,128,153,0.05);border-top-right-radius:5px;border-bottom-right-radius:5px;padding:15px 20px}blockquote p{margin-bottom:15px;font-size:14px;line-height:1.428571429}
+        blockquote{padding:10px 20px;margin:20px 0 ;border-left:5px solid rgba(102,128,153,0.075)}
+        blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
+        blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
 
-        blockquote p {
-            margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 1.428571429
-        }
+        /*»Øµ½¶¥²¿ºÍÏà¹ØÆ®´°*/
+        #gotop {position: absolute;width: 20px;height: 64px;padding: 15px 7px;background: #b40000;color: #fff;font-family: "Microsoft YaHei";font-size: 14px;font-weight: 800;text-align: center;line-height: 16px;cursor: pointer;top: 500px;right:0;z-index: 99;}
+        #gotop:hover{text-decoration: none}
 
-        blockquote {
-            padding: 10px 20px;
-            margin: 20px 0;
-            border-left: 5px solid rgba(102, 128, 153, 0.075)
-        }
+        .fixbox{display: block;position: absolute;}
+        .fixbox .btn{display: block;width: 100%;height: 100%;position:absolute;top:0px;left:0px;z-index:98}
 
-        blockquote p {
-            font-size: 18px;
-            font-weight: bold !important;
-            line-height: 1.25;
-        }
-
-        blockquote a {
-            font-size: 18px;
-            font-weight: bold !important;
-            line-height: 1.25;
-            color: #7492CE;
-            text-decoration: underline
-        }
-
+        .fbox-l{left:0px;width: 150px;height: 300px;background: url(http://res.nie.netease.com/tx3/gw/13v1/images/150300.jpg) no-repeat 0px 0px;}
+        .fbox-l .aclose{width:20px;height:20px;position:absolute;top:0px;right:0px;z-index:99}
     </style>
 </head>
 <body>
@@ -69,28 +49,57 @@
         <div id="wrap2">
             <div id="wrap3">
                 <div id="main">
-                    <!--æ–°é—»åˆ—è¡¨-->
+                    <!--ĞÂÎÅÁĞ±í-->
                     <blockquote>
-                        <p>å›åˆ°é¡¶éƒ¨æŒ‰é’®ï¼ˆè¯·çœ‹å³è¾¹ï¼‰</p>
-                        é€šç”¨çš„å›åˆ°é¡¶éƒ¨æŒ‰é’®ï¼Œåˆå§‹éšè—ï¼Œä¸‹æ‹‰åå‡ºç°<br>
-                        <a href="index.html">å›åˆ°é¦–é¡µ</a>
+                        <p>»Øµ½¶¥²¿°´Å¥£¨Çë¿´ÓÒ±ß£©</p>
+                        Í¨ÓÃµÄ»Øµ½¶¥²¿°´Å¥£¬³õÊ¼Òş²Ø£¬ÏÂÀ­ºó³öÏÖ<br>
+                        <a href="index.html">»Øµ½Ê×Ò³</a>
                     </blockquote>
-                    <a id="gotop">è¿”å›é¡¶éƒ¨</a>
-
-
                 </div>
 
             </div>
         </div>
     </div>
 </div>
+<a id="gotop" class="fixbox">·µ»Ø¶¥²¿</a>
+<div class="fixbox fbox-l">
+    <a href="http://tx3.163.com/shimei/" target="_blank" class="btn"></a>
+    <a href="javascript:void(0)" class="aclose"></a>
+</div>
 
-<div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    var w=$(window);
+    var qreg = $('.fixbox');
+    //    Æ®´°
+    if($.browser.msie && $.browser.version == '6.0') {
+        $(window).scroll(function(){
+            fixQregPosition(400);
+        });
+    }else{
+        $(window).scroll(function(){
+            if(w.scrollTop() >= 300) {
+                qreg.css({position:'fixed',top:'110px'});
+            }else{
+                qreg.css({position:'absolute',top:'400px'});
+            }
+        });
+    }
+    $('.aclose').click(function(){
+        $(this).parent().hide();
+    });
+    $("#gotop").click(function () {
+        $("html,body").animate({scrollTop:0},200);
+    })
+    function fixQregPosition(time){
+        var elm=qreg,h=elm.outerHeight(),scTop=w.scrollTop(),wH=w.height();
+        if(h>=wH) return;
+        elm.stop().animate({"top":scTop+(wH-h - 20)},time||400);
+    }
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">
-    $(function () {
+    $(function(){
         $.fixPNG.fix('.png64');
     })
 

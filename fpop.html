@@ -2,61 +2,43 @@
 <html>
 <head>
     <title>NeteaseUI</title>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-    <meta charset="utf-8">
-    <!--é¡¹ç›®metaä¿¡æ¯ï¼Œè¯·ç¼–è¾‘æä¾› start-->
-    <meta name="author" content="ç½‘æ˜“ï¼ŒNetEase Inc."/>
-    <meta name="copyright" content="ç½‘æ˜“ï¼ŒNetEase Inc."/>
-    <meta name="pmid" content="274800"/>
-    <meta name="editor" content="Leon"/>
-    <meta name="designer" content="doudou,QQ,CP-D"/>
-    <meta name="front-end technicist" content="MrF"/>
-    <!--é¡¹ç›®metaä¿¡æ¯ï¼Œè¯·ç¼–è¾‘æä¾› end-->
-    <meta name="renderer" content="webkit">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta charset="gb2312">
+    <!--ÏîÄ¿metaĞÅÏ¢£¬Çë±à¼­Ìá¹© start-->
+    <!--²âÊÔ±¾µØ·ÖÖ§ĞŞ¸Ä-->
+    <meta name="author" content="ÍøÒ×£¬NetEase Inc." />
+    <meta name="copyright" content="ÍøÒ×£¬NetEase Inc." />
+    <meta name="pmid" content="274800" />
+    <meta name="editor" content="Leon" />
+    <meta name="designer" content="doudou,QQ,CP-D" />
+    <meta name="front-end technicist" content="MrF" />
+    <!--ÏîÄ¿metaĞÅÏ¢£¬Çë±à¼­Ìá¹© end-->
+	<meta name="renderer" content="webkit">
     <link rel="dns-prefetch" href="http://res.nie.netease.com">
-    <!-- jquery mix NIE (æœ€æ–°ç‰ˆæœ¬ï¼‰-->
+    <!-- jquery mix NIE (×îĞÂ°æ±¾£©-->
     <script charset="gb2312" src="http://res.nie.netease.com/comm/js/jquery(mixNIE).last.js"></script>
     <!--[if lt IE 9]>
     <script src="http://res.nie.netease.com/comm/html5/html5shiv.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="css/page.css"/>
-    <!--åº•éƒ¨ç‰ˆæƒé¢œè‰²å˜ç™½ï¼Œå¦‚æœæ­£å¸¸ï¼Œåˆ™å»æ‰ä»¥ä¸‹-->
+    <!--µ×²¿°æÈ¨ÑÕÉ«±ä°×£¬Èç¹ûÕı³££¬ÔòÈ¥µôÒÔÏÂ-->
     <script>nie.config.copyRight.setGray();</script>
     <style>
-        blockquote {
-            border-left-width: 10px;
-            background-color: rgba(102, 128, 153, 0.05);
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            padding: 15px 20px
-        }
+        blockquote{border-left-width:10px;background-color:rgba(102,128,153,0.05);border-top-right-radius:5px;border-bottom-right-radius:5px;padding:15px 20px}blockquote p{margin-bottom:15px;font-size:14px;line-height:1.428571429}
+        blockquote{padding:10px 20px;margin:20px 0 ;border-left:5px solid rgba(102,128,153,0.075)}
+        blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
+        blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
 
-        blockquote p {
-            margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 1.428571429
-        }
-
-        blockquote {
-            padding: 10px 20px;
-            margin: 20px 0;
-            border-left: 5px solid rgba(102, 128, 153, 0.075)
-        }
-
-        blockquote p {
-            font-size: 18px;
-            font-weight: bold !important;
-            line-height: 1.25;
-        }
-
-        blockquote a {
-            font-size: 18px;
-            font-weight: bold !important;
-            line-height: 1.25;
-            color: #7492CE;
-            text-decoration: underline
-        }
+        /*µ¯²ãÃÉ°æ*/
+        .dTc{position:absolute;zoom:1;top:200px;z-index:999999}
+        .aCloseQ{display:block;position:absolute;right:21px;top:27px;width:20px;height:20px;cursor:pointer;text-indent: -9999px}
+        #NIE-overlayer{display:none;position:absolute;width:100%;height:100%;background:#000;filter:alpha(opacity=80);opacity:.8;top:0;left:0;z-index:99}
+        /*ÊÓÆµµ¯²ã*/
+        .videoBox {background: #000;}
+        .videoBox .dialogCon {overflow: hidden;padding: 5px;}
+        .videoBox .dVideoBox {border: 1px solid #999;padding: 4px;background: #666;}
+        .videoBox .aCloseQ {position: absolute;width: 57px;height: 57px;display: block;right: -57px;top: 0;cursor: pointer;overflow: hidden;text-indent: -9999px;background: url(http://res.nie.netease.com/tx3/gw/13v1/images/close.jpg) no-repeat 0 0;}
 
     </style>
 </head>
@@ -69,77 +51,63 @@
         <div id="wrap2">
             <div id="wrap3">
                 <div id="main">
-                    <!--æ–°é—»åˆ—è¡¨-->
+                    <!--ĞÂÎÅÁĞ±í-->
                     <blockquote>
-                        <p>å¼¹å±‚åˆé›†ï¼ˆæ™®é€šå¼¹å±‚ã€flashå¼¹å±‚ã€è§†é¢‘å¼¹å±‚ï¼‰</p>
-                        å¼¹å±‚æ’ä»¶ï¼Œå¯ä»¥æ§åˆ¶å¼¹å±‚çš„å¤§å°ã€ä¼ å…¥flashåœ°å€ï¼Œå’Œflashçš„wmodeï¼Œè§†é¢‘åœ°å€<br>
-                        <a href="index.html">å›åˆ°é¦–é¡µ</a>
+                        <p>µ¯²ãºÏ¼¯£¨ÆÕÍ¨µ¯²ã¡¢flashµ¯²ã¡¢ÊÓÆµµ¯²ã£©</p>
+                        µ¯²ã²å¼ş£¬¿ÉÒÔ¿ØÖÆµ¯²ãµÄ´óĞ¡¡¢´«ÈëflashµØÖ·£¬ºÍflashµÄwmode£¬ÊÓÆµµØÖ·<br>
+                        <a href="index.html">»Øµ½Ê×Ò³</a>
                     </blockquote>
-                    <a href="javascript:void(0)" id="pop1">ç‚¹å‡»æˆ‘å°±å¼¹å‡º æ™®é€š å¼¹å±‚äº†å“¦äº²</a>
+                    <a href="javascript:void(0)" id="pop1">µã»÷ÎÒ¾Íµ¯³ö ÆÕÍ¨ µ¯²ãÁËÅ¶Ç×</a>
                     <style type="text/css">
-                        #shareTc {
-                            width: 491px;
-                            height: 524px;
-                            background: url(http://res.nie.netease.com/xy2/zt/14/0126_newyear5/images/tcbg.jpg) no-repeat
-                        }
-
-                        #shareTc .aCloseQ {
-                            display: block;
-                            position: absolute;
-                            right: 10px;
-                            top: 12px;
-                            width: 57px;
-                            height: 51px;
-                            cursor: pointer;
-                            text-indent: -9999px
-                        }
+                        #shareTc{width:491px;height:524px;background: url(http://res.nie.netease.com/xy2/zt/14/0126_newyear5/images/tcbg.jpg) no-repeat}
+                        #shareTc .aCloseQ{display:block;position:absolute;right: 10px;top: 12px;width: 57px;height: 51px;cursor:pointer;text-indent: -9999px}
                     </style>
                     <br>
-                    <a href="javascript:void(0)" id="pop2">ç‚¹å‡»æˆ‘å°±å¼¹å‡º flash å¼¹å±‚äº†å“¦äº²</a>
+                    <a href="javascript:void(0)" id="pop2">µã»÷ÎÒ¾Íµ¯³ö flash µ¯²ãÁËÅ¶Ç×</a>
                     <br>
-                    <a href="javascript:void(0)" id="pop3">ç‚¹å‡»æˆ‘å°±å¼¹å‡º è§†é¢‘ å¼¹å±‚äº†å“¦äº²</a>
+                    <a href="javascript:void(0)" id="pop3">µã»÷ÎÒ¾Íµ¯³ö ÊÓÆµ µ¯²ãÁËÅ¶Ç×</a>
 
                     <script>
-                        $(function () {
-                            //-----------ä»¥ä¸‹ä¸ºæ™®é€šå¼¹å±‚ç¤ºä¾‹
-                            $('#pop1').click(function () {
+                        $(function(){
+                            //-----------ÒÔÏÂÎªÆÕÍ¨µ¯²ãÊ¾Àı
+                            $('#pop1').click(function(){
                                 openD({
-                                    id: '#shareTc',//å¼¹å‡ºçš„å¼¹å±‚id
-                                    type: '1',//1ä¸ºæ™®é€šå¼¹å±‚ï¼Œ2ä¸ºflashå¼¹å±‚ï¼Œ3ä¸ºè§†é¢‘å¼¹å±‚
-                                    width: '491',//å¼¹å±‚å®½åº¦
-                                    height: '524'//å¼¹å±‚é«˜åº¦
+                                    id: '#shareTc',//µ¯³öµÄµ¯²ãid
+                                    type : '1'//1ÎªÆÕÍ¨µ¯²ã£¬2Îªflashµ¯²ã£¬3ÎªÊÓÆµµ¯²ã
                                 })
                             })
-                            //-----------ä»¥ä¸‹ä¸ºflashå¼¹å±‚ç¤ºä¾‹
-                            $('#pop2').click(function () {
+                            //-----------ÒÔÏÂÎªflashµ¯²ãÊ¾Àı
+                            $('#pop2').click(function(){
                                 openD({
-                                    id: '#flashtc1',//å¼¹å‡ºçš„å¼¹å±‚id
-                                    type: '2',//1ä¸ºæ™®é€šå¼¹å±‚ï¼Œ2ä¸ºflashå¼¹å±‚ï¼Œ3ä¸ºè§†é¢‘å¼¹å±‚
-                                    width: '960',//å¼¹å±‚å®½åº¦
-                                    height: '600',//å¼¹å±‚é«˜åº¦
-                                    flashurl: 'http://res.nie.netease.com/xy2/qt/14/0109_biwu/pop.swf',//å¼¹å±‚æ‰€éœ€çš„flashåœ°å€
+                                    id: '#flashtc1',//µ¯³öµÄµ¯²ãid
+                                    type : '2',//1ÎªÆÕÍ¨µ¯²ã£¬2Îªflashµ¯²ã£¬3ÎªÊÓÆµµ¯²ã
+                                    width: '960',//µ¯²ã¿í¶È
+                                    height: '600',//µ¯²ã¸ß¶È
+                                    flashurl:'http://res.nie.netease.com/xy2/qt/14/0109_biwu/pop.swf',//µ¯²ãËùĞèµÄflashµØÖ·
                                     wmode: 'opaque'
                                 })
                             })
-                            //-----------ä»¥ä¸‹ä¸ºè§†é¢‘å¼¹å±‚ç¤ºä¾‹
-                            $('#pop3').click(function () {
+                            //-----------ÒÔÏÂÎªÊÓÆµµ¯²ãÊ¾Àı
+                            $('#pop3').click(function(){
                                 openD({
-                                    id: '#videoShow',//å¼¹å‡ºçš„å¼¹å±‚id
-                                    type: '3',//1ä¸ºæ™®é€šå¼¹å±‚ï¼Œ2ä¸ºflashå¼¹å±‚ï¼Œ3ä¸ºè§†é¢‘å¼¹å±‚
-                                    width: '800',//å¼¹å±‚å®½åº¦
-                                    height: '450',//å¼¹å±‚é«˜åº¦
-                                    videourl: 'http://v.nie.netease.com/tx3/2013/1231/longwu.f4v'//å¼¹å±‚æ‰€éœ€çš„flashåœ°å€
+                                    id: '#videoShow',//µ¯³öµÄµ¯²ãid
+                                    type : '3',//1ÎªÆÕÍ¨µ¯²ã£¬2Îªflashµ¯²ã£¬3ÎªÊÓÆµµ¯²ã
+                                    width: '800',//µ¯²ã¿í¶È
+                                    height: '450',//µ¯²ã¸ß¶È
+                                    videourl:'http://v.nie.netease.com/tx3/2013/1231/longwu.f4v'//µ¯²ãËùĞèµÄflashµØÖ·
                                 })
                             })
 
                         })
-                        //flashè‡ªå·±å†…éƒ¨è°ƒç”¨çš„å‡½æ•°
-                        var closeMe = function () {
+                        //flash×Ô¼ºÄÚ²¿µ÷ÓÃµÄº¯Êı
+                        var closeMe = function(){
                             $("#NIE-overlayer").hide();
                             $('.aCloseQ').show();
                             $('#flashtc1').hide();
                         }
                     </script>
+
+
 
 
                 </div>
@@ -150,36 +118,120 @@
 </div>
 
 <div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    //µ¯²ã
+    //--Õâ¸öº¯ÊıÊÇ½«ÈıÖÖ»ù±¾µ¯²ãºÏÔÚÒ»ÌåµÄ£¬ËùÒÔ´úÂë»á±È½Ï³¤Ò»Ğ©£¬¿ÉÒÔ¸ù¾İĞèÇó×Ô¼º¶ÀÁ¢³öÀ´Ïà¶ÔÓ¦µÄµ¯²ã´úÂë
+    function openD(opt){
+        //Ö»Õë¶ÔÒ»¸ötab con
+        var settings = {
+                    id: '',
+                    type : '',//1ÎªÆÕÍ¨µ¯²ã£¬2Îªflashµ¯²ã£¬3ÎªÊÓÆµµ¯²ã
+                    width: '',//2ºÍ3ĞèÒªÊ¹ÓÃ
+                    height: '',//2ºÍ3ĞèÒªÊ¹ÓÃ
+                    flashurl:'',//2ĞèÒªÊ¹ÓÃ£¬flashµØÖ·
+                    videourl:'',//3ĞèÒªÊ¹ÓÃ£¬ÊÓÆµµØÖ·
+                    wmode: '',//2ºÍ3¿ÉÄÜĞèÒªÊ¹ÓÃ
+                    startImg:''//3ĞèÒªÊ¹ÓÃ£¬ÊÓÆµ½ØÍ¼
+                },
+                opt = opt || {};
+        settings = $.extend(settings, opt);
+
+        var popbg = $("#NIE-overlayer"),
+                popid = $(settings.id),
+                type = settings.type,
+                w =parseInt(settings.width),
+                h = parseInt(settings.height),
+                vimg = settings.startImg,
+                furl = settings.flashurl,
+                vurl = settings.videourl,
+                wmode = settings.wmode,
+                dh = $(document).height(),
+                wh = $(window).height(),
+                ww = $(window).width(),
+                st = $(window).scrollTop(),
+                sl = $(window).scrollLeft();
+// ÃÉ°æµ¯³ö
+        popbg.css({"height":dh}).show();
+// µ¯²ãµ¯³ö
+        function posPop(idname){
+            idname.height()>wh?idname.fadeIn().css({'top':st,'left':(ww-idname.width())/2+sl}):idname.fadeIn().css({'top':(wh-idname.height())/2+st,'left':(ww-idname.width())/2+sl});
+        }
+//  µ¯²ã¹Ø±Õ
+        $('.aCloseQ').click(function(){
+            $(this).parent().fadeOut();
+            $("#NIE-overlayer").hide();
+        });
+//ÅĞ¶Ïµ¯²ãÀà±ğ
+        switch (type){
+            case '1':
+                posPop(popid);
+                break;
+            case '2':
+                $('#flash-wrap').html('');
+                nie.use(["util.swfobject"], function () {
+                    $('#flash-wrap').flash({
+                        swf:furl,
+                        width:w,
+                        height:h,
+                        allowScriptAccess:'always',
+                        wmode:wmode
+                    });
+                })
+                var obj = $('#flashtc1');
+                obj.css({'width':w,'height':h});
+                $('.aCloseQ').hide();//flash±¾ÉíÓĞ×ö¹Ø±Õ°´Å¥
+                posPop(popid);
+
+                break;
+            case '3':
+                $('#dVideo').html('').css({'height':h+'px','width':w+'px'});
+                popid.css({'height':h+22+'px','width':w+22+'px'});
+                posPop(popid);
+                nie.use(['nie.util.video'], function () {
+                    nie.util.video($('#dVideo'),{
+                        movieUrl:vurl,
+                        mp4_movieUrl:vurl.replace(/\.(flv|f4v)/,'.mp4'),
+                        width:w,
+                        height:h,
+                        startImg:vimg,
+                        bufferTime:5,
+                        loopTimes:0,
+                        wmode:"opaque",
+                        volume:0.8,
+                        autoPlay:true
+                    });
+                })
+                break;
+            default :break;
+        }
+
+    }
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">
-    $(function () {
+    $(function(){
         $.fixPNG.fix('.png64');
     })
 
 </script>
 <![endif]-->
 
-<!--æ™®é€šå¼¹å±‚-->
+<!--ÆÕÍ¨µ¯²ã-->
 <div class="dTc" id="shareTc" style="display:none">
-    <h3 class="hide">åˆ†äº«èµ¢é¾™é©¬ï¼Œé€è´´å¿ƒé˜²é›¾éœ­å£ç½©</h3>
+    <h3 class="hide">·ÖÏíÓ®ÁúÂí£¬ËÍÌùĞÄ·ÀÎíö°¿ÚÕÖ</h3>
     <a class="aCloseQ" href="javascript:void(0)"></a>
 </div>
-<!--flashå¼¹å±‚-->
+<!--flashµ¯²ã-->
 <div id="flashtc1" class="dTc" style="display:none">
     <a href="javascript:void(0)" class="aCloseQ"></a>
-
     <div id="flash-wrap"></div>
 </div>
-<!--è§†é¢‘å¼¹å±‚-->
+<!--ÊÓÆµµ¯²ã-->
 <div class="dTc videoBox" id="videoShow" style="display: none">
-    <a class="aCloseQ" title="å…³é—­">å…³é—­</a>
-
+    <a class="aCloseQ" title="¹Ø±Õ">¹Ø±Õ</a>
     <div class="dialogCon">
-        <div class="dVideoBox">
-            <div id="dVideo"></div>
-        </div>
+        <div class="dVideoBox"><div id="dVideo"></div></div>
     </div>
 </div>
 </body>
