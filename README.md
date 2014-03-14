@@ -61,8 +61,11 @@ NeteaseUI
  http://fangge.github.io/NeteaseUI/fDyShare.html
 
  13.图片延迟加载
+
  参考地址：http://wh.163.com/index.html
+
  代码请参考：nie.util.pageLoad
+
  页面中的img标签中的图片地址都填写在data-src属性中即可
 
  ```javascript
