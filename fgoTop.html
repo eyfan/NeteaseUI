@@ -29,6 +29,15 @@
         blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
         blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
 
+        /*回到顶部和相关飘窗*/
+        #gotop {position: absolute;width: 20px;height: 64px;padding: 15px 7px;background: #b40000;color: #fff;font-family: "Microsoft YaHei";font-size: 14px;font-weight: 800;text-align: center;line-height: 16px;cursor: pointer;top: 500px;right:0;z-index: 99;}
+        #gotop:hover{text-decoration: none}
+
+        .fixbox{display: block;position: absolute;}
+        .fixbox .btn{display: block;width: 100%;height: 100%;position:absolute;top:0px;left:0px;z-index:98}
+
+        .fbox-l{left:0px;width: 150px;height: 300px;background: url(http://res.nie.netease.com/tx3/gw/13v1/images/150300.jpg) no-repeat 0px 0px;}
+        .fbox-l .aclose{width:20px;height:20px;position:absolute;top:0px;right:0px;z-index:99}
     </style>
 </head>
 <body>
@@ -46,20 +55,47 @@
                         通用的回到顶部按钮，初始隐藏，下拉后出现<br>
                         <a href="index.html">回到首页</a>
                     </blockquote>
-                    <a id="gotop">返回顶部</a>
-
-
-
-
                 </div>
 
             </div>
         </div>
     </div>
 </div>
+<a id="gotop" class="fixbox">返回顶部</a>
+<div class="fixbox fbox-l">
+    <a href="http://tx3.163.com/shimei/" target="_blank" class="btn"></a>
+    <a href="javascript:void(0)" class="aclose"></a>
+</div>
 
-<div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    var w=$(window);
+    var qreg = $('.fixbox');
+    //    飘窗
+    if($.browser.msie && $.browser.version == '6.0') {
+        $(window).scroll(function(){
+            fixQregPosition(400);
+        });
+    }else{
+        $(window).scroll(function(){
+            if(w.scrollTop() >= 300) {
+                qreg.css({position:'fixed',top:'110px'});
+            }else{
+                qreg.css({position:'absolute',top:'400px'});
+            }
+        });
+    }
+    $('.aclose').click(function(){
+        $(this).parent().hide();
+    });
+    $("#gotop").click(function () {
+        $("html,body").animate({scrollTop:0},200);
+    })
+    function fixQregPosition(time){
+        var elm=qreg,h=elm.outerHeight(),scTop=w.scrollTop(),wH=w.height();
+        if(h>=wH) return;
+        elm.stop().animate({"top":scTop+(wH-h - 20)},time||400);
+    }
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">

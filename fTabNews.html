@@ -29,6 +29,13 @@
         blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
         blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
 
+        /*ÐÂÎÅÇÐ»»*/
+        .fTabNav {height:29px;overflow:hidden;background:#23b0eb;}
+        .fTabNav li {float:left;width:84px;height:29px;}
+        .fTabNav li a {display:block;height:27px;border:2px solid #23b0eb;border-bottom:0;color:#fff;text-align:center;font-size:14px;line-height:27px;}
+        .fTabNav li.current a {background:#dff1fb;color:#23b0eb;}
+        .fTabCont .ftxtList{display: none}
+        .fTabCont .current{display: block}
     </style>
 </head>
 <body>
@@ -90,9 +97,6 @@
                             </ul>
                         </section>
                     </div>
-
-
-
                 </div>
 
             </div>
@@ -101,7 +105,13 @@
 </div>
 
 <div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    nie.use(["ui.tab"], function () {
+//        tab
+        $.tab(".fTabNav li", ".fTabCont .ftxtList");
+
+    });
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">

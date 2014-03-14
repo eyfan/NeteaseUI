@@ -29,6 +29,24 @@
         blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
         blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
 
+        /*大话2广告Banner*/
+        .xy2Banner{width: 420px;position: relative}
+        .dSwitch2{position:relative;width:420px;height:240px;overflow:hidden}
+        .dSwitch2 a{position:absolute;display:block;width:420px;height:240px}
+        .dSwitch2 img{display:block;width:420px;height:240px}
+        .dSwitchnav2{float:right;position:relative;display:inline;height:14px;margin:-24px 10px 0 0;z-index:2;text-align:right}
+        .dSwitchnav2 a{display:inline-block;width:14px;height:14px;overflow:hidden;margin-left:4px;background:#d5d5d5;text-align:left;color:#514e4a;cursor:pointer;font-size:12px;text-align:center;line-height:14px}
+        .dSwitchnav2 a.current{background:#b60000;color:#ecbcbf}
+
+        /*天下3广告Banner*/
+        .SwitchPic {width: 351px;height: 168px;overflow: hidden;position: relative;}
+        .SwitchPicWrap {position: relative;width: 351px;height: 168px;}
+        .SwitchPicShow {position: absolute;display: block;width: 351px;height: 168px;}
+        .SwitchPicShow img {display: block;width: 352px;height: 168px;}
+        .SwitchPicNav {width: 351px;height: 22px;line-height: 22px;position: absolute;right: 0;bottom: 0; z-index: 2;}
+        .SwitchPicNav nav {float: right;margin-right: 10px;}
+        .SwitchPicNavBtn {display: inline-block;margin-left: 6px;width: 7px;height: 7px;background: url(http://res.nie.netease.com/tx3/zt/13/1120_show/images/switchbtn.png) no-repeat -7px 0;text-align: center;line-height: 14px;color: #fff;cursor: default;font-size: 12px;}
+        .SwitchPicNavBtn:hover, .SwitchPicNavBtn.current {background-position: 0 0;}
     </style>
 </head>
 <body>
@@ -69,7 +87,29 @@
 </div>
 
 <div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    nie.use([ 'ui.Switch'], function () {
+//        大话2广告Banner
+        nie.util.abc.load({promark: "lis9z", callBack: function () {
+            var g = $("#switch-2").find("a"), f = $("#switchnav-1");
+            g.each(function (j) {
+                var h = j + 1;
+                f.append("<a>" + h + "</a>")
+            });
+            $.Switch({btnDoms: [f.children("a")], imgDoms: [g]});
+        }, type: "js"});
+        //        天下3广告Banner
+        nie.util.abc.load({promark: "zrpnw", callBack: function () {
+            var g = $("#banner-switch").find("a"), f = $("#switchnav-2").find("nav");
+            g.each(function () {
+                $(this).addClass('SwitchPicShow');
+                f.append("<a class='SwitchPicNavBtn sprite sprite-switchnav'></a>")
+            });
+            $.Switch({btnDoms: [f.children("a")], imgDoms: [g]})
+        }, type: "js"})
+    })
+
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">

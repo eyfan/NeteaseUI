@@ -28,7 +28,10 @@
         blockquote{padding:10px 20px;margin:20px 0 ;border-left:5px solid rgba(102,128,153,0.075)}
         blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
         blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
-
+        /*ËÑË÷°æ¿é*/
+        .fSearch {width: 392px;height: 31px;padding: 14px; margin: 0 auto;background: url(http://res.nie.netease.com/xy2/gw/13v2/images/schbg.jpg) no-repeat;}
+        .fSearch .inpTxt {width: 301px;height: 29px;background: #f3eee5;font-size: 12px;line-height: 29px;color: #b2866b;padding-left: 10px;}
+        .fSearch .inpBut {float: right;width: 68px;height: 30px;overflow: hidden;border: 0;text-indent: -9999px;cursor: pointer;background: none}
     </style>
 </head>
 <body>
@@ -64,7 +67,15 @@
 </div>
 
 <div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //    ËÑË÷°æ¿é
+        $('.fSearch').find('.inpBut').click(function(){
+            var val = $("#searchKeyWords1").val();
+            window.open(encodeURI("http://so.xy2.163.com/search?qs="+val));
+        })
+    })
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">

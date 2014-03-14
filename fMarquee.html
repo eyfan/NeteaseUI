@@ -29,6 +29,13 @@
         blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
         blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
 
+        /*滚动模块*/
+        .fMarquee {position:relative;width:275px;height:158px;overflow:hidden;}
+        .fMarquee .mar {position:relative;width:275px;}
+        #marquee2{height: 30px}
+        #marquee2 ul{width: 9999px}
+        #marquee2 li{float: left}
+
     </style>
 </head>
 <body>
@@ -83,7 +90,15 @@
 </div>
 
 <div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    nie.use(["ui.marquee2"], function () {
+        //        滚动模块
+        if($("#marquee li").length > 3){
+            $.marquee2("#marquee","top");
+        }
+        $.marquee2("#marquee2","left");
+    })
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">

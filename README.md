@@ -28,7 +28,7 @@ NeteaseUI
 
  http://fangge.github.io/NeteaseUI/fSmartBanner.html
 
- 5.回到顶部按钮
+ 5.通用飘窗
 
  http://fangge.github.io/NeteaseUI/fgoTop.html
 

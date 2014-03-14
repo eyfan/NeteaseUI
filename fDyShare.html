@@ -28,6 +28,19 @@
         blockquote{padding:10px 20px;margin:20px 0 ;border-left:5px solid rgba(102,128,153,0.075)}
         blockquote p{font-size:18px;font-weight:bold!important;line-height:1.25;}
         blockquote a{font-size:18px;font-weight:bold!important;line-height:1.25;color: #7492CE;text-decoration: underline}
+
+        /*动态输出分享内容*/
+        .epic{float:left; margin:65px 0 0 45px; _margin-left:20px; width:325px; height:485px; border:5px solid #0082b8;}
+        .edit{color:#000; font:14px "Microsoft Yahei"; font-weight:bold;}
+        textarea{margin:10px 0 10px 0;  +margin-left:-40px; padding:10px; _padding:10px 20px 10px 40px; width:415px; height:160px; background:#1c1e20; border:none; color:#3cc7f5; font:12px "宋体"; line-height:25px; overflow:hidden;}
+        .demon{margin:10px 0 0 0; padding:10px; width:415px; height:35px; border:2px solid #0082b8; background:#cecece; color:#363e4a; font:12px "宋体"; line-height:20px; cursor:pointer;}
+        .check{background:url(http://res.nie.netease.com/yxsg/qt/13/0904_whynot/images/bingo.jpg) 415px 40px no-repeat #cecece;}
+        .bshare{margin:25px 0 0 0; color:#b1ced2; font:20px "Microsoft Yahei"; width:437px; height:74px; background:url(http://res.nie.netease.com/yxsg/qt/13/0904_whynot/images/share.jpg) no-repeat;}
+        .bshare .NIE-share-txt {display: none;}
+        .bshare .NIE-share{margin:18px 0 0 146px; float:left;}
+        .bshare .NIE-share-iconBtn a{margin-right:33px!important;}
+        .bshare .NIE-share-more{display:none!important;}
+        .bshare .NIE-share2 .NIE-share-iconBtn a img,.bshare .NIE-share2 .NIE-share-more em{background:none!important;}
     </style>
 </head>
 <body>
@@ -64,7 +77,44 @@
 </div>
 
 <div id="NIE-overlayer"></div>
-<script type="text/javascript" src="js/page.js"></script>
+<script type="text/javascript">
+    nie.use([,"util.share"], function () {
+        //        动态输出分享内容
+        var share3=nie.util.share({
+            fat:".bshare",
+            type:2,
+            title:"#中国原创电竞被世界认可，WHYNOT！#我是中国玩家，我要为中国原创电竞正名！中国原创竞技大作《英雄三国》，更公平，告别4V5，告别挂机坑货。中国原创需要你我正确对待，星星之火可以燎原，让我们一起为中国原创电竞加油！",
+            content:"#中国原创电竞被世界认可，WHYNOT！#我是中国玩家，我要为中国原创电竞正名！中国原创竞技大作《英雄三国》，更公平，告别4V5，告别挂机坑货。中国原创需要你我正确对待，星星之火可以燎原，让我们一起为中国原创电竞加油！",
+            defShow: [5, 2, 3, 1],
+            img: ""
+        });
+        var content="#中国原创电竞被世界认可，WHYNOT！#我是中国玩家，我要为中国原创电竞正名！中国原创竞技大作《英雄三国》，更公平，告别4V5，告别挂机坑货。中国原创需要你我正确对待，星星之火可以燎原，让我们一起为中国原创电竞加油！",choice=false;
+        $(".demon").click(function(){
+            if(choice==false){
+                $("textarea").val("#中国原创电竞被世界认可，WHYNOT！#我是中国玩家，我要为中国原创电竞正名！中国原创竞技大作《英雄三国》，更公平，告别4V5，告别挂机坑货。中国原创需要你我正确对待，星星之火可以燎原，让我们一起为中国原创电竞加油！");
+                $(this).addClass("check");
+                choice=true;
+            }else{
+                $(this).removeClass("check");
+                choice=false;
+            }
+        })
+        $("textarea").focus(function(){
+            if($("textarea").val()=="请在此输入您的宣言") $("textarea").val("");
+            choice=false;
+        }).blur(function(){
+                    if($(this).val()!=content && $(this).val()!=""){
+                        share3.args.title="#中国原创电竞被世界认可，WHYNOT！#"+$(this).val();
+                        share3.args.content="#中国原创电竞被世界认可，WHYNOT！#"+$(this).val();
+                        $(".demon").removeClass("check");
+                        choice=false;
+                    }else{
+                        $(".demon").addClass("check");
+                        choice=true;
+                    }
+                });
+    })
+</script>
 <!--[if IE 6]>
 <script type="text/javascript" src="http://res.nie.netease.com/comm/html5/fixPNG.js"></script>
 <script type="text/javascript">
