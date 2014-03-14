@@ -60,7 +60,7 @@ NeteaseUI
 
  http://fangge.github.io/NeteaseUI/fDyShare.html
 
- 13. 图片延迟加载
+ 13.图片延迟加载
  参考地址：http://wh.163.com/index.html
  代码请参考：nie.util.pageLoad
  ```javascript
@@ -76,6 +76,6 @@ NeteaseUI
  ```
  注：用于图片较多且较长的页面，常用于官网。
 
- >持续更新中...
+>持续更新中...
 
 
