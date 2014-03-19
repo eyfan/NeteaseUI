@@ -154,7 +154,7 @@
         popbg.css({"height":dh}).show();
 // µ¯²ãµ¯³ö
         function posPop(idname){
-            idname.height()>wh?idname.fadeIn().css({'top':st,'left':(ww-idname.width())/2+sl}):idname.fadeIn().css({'top':(wh-idname.height())/2+st,'left':(ww-idname.width())/2+sl});
+            idname.height()>wh?idname.fadeIn().css({'top':st,'left':(ww-idname.width())/2+sl}):idname.fadeIn().css({'top':(wh-idname.outerHeight())/2+st,'left':(ww-idname.outerWidth())/2+sl});
         }
 //  µ¯²ã¹Ø±Õ
         $('.aCloseQ').click(function(){
